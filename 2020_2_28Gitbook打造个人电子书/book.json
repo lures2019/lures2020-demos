@@ -1,0 +1,35 @@
+{
+    "title": "使用Gitbook打造免费的个人电子书",
+    "description": "lures手把手完整式教程！",
+    "author": "lures",
+    "language": "zh-hans",
+    "root": ".",
+
+    "plugins": [
+        "donate",
+        "github-buttons@2.1.0",
+        "edit-link"
+    ],
+
+    "pluginsConfig": {
+        "donate": {
+            "wechat": "https://lures2019.github.io/images/wechatpay.png",
+            "alipay": "https://lures2019.github.io/images/alipay.png",
+            "title": "",
+            "button": "打赏",
+            "alipayText": "支付宝打赏",
+            "wechatText": "微信打赏"
+        },
+        "github-buttons": {
+            "repo": "lures2019/lures2020-demos",
+            "types": [
+                "star"
+            ],
+            "size": "small"
+        },
+        "edit-link": {
+            "base": "https://github.com/lures2019/lures2020-demos/2020_2_28Gitbook打造个人电子书",
+            "label": "Edit This Page"
+        }
+    }
+}
