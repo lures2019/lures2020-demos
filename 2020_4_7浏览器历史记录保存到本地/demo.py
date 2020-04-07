@@ -1,6 +1,5 @@
 import os
 import sqlite3
-import re
 import datetime
 import csv
 import time
@@ -12,27 +11,14 @@ history_db = os.path.join(path,'history')
 
 c = sqlite3.connect(history_db)         # 连接数据库
 cursor = c.cursor()                     # 获取游标
-select_statement = "select urls.url,urls.visit_count from urls,visits where urls.id=visits.url;"
+select_statement = "select * from urls where visit_count>=1;"
 cursor.execute(select_statement)        # 创建数据库以及数据表
 results = cursor.fetchall()
-sites_count = {}
-
-for url,count in results:
-    if url in sites_count:
-        sites_count[url] += 1
-    else:
-        sites_count[url] = 1
-sites_count_sorted = sorted(sites_count.items(), key=lambda k: k[1])
-results = re.findall("\((.*?)\)",str(sites_count_sorted),re.S)
-f = open('浏览器搜索网址信息.csv',mode="a+",newline="",encoding="utf-8-sig")
+f = open("浏览器历史网址信息.csv",mode="w",newline="",encoding="utf-8-sig")
 csv_write = csv.writer(f)
-csv_write.writerow(['网址url','搜索次数','数据保存时间'])
-for result in results:
-    try:
-        if('http://' or 'https://') in result:
-            csv_write.writerow([result.split(r',')[0].replace(r"'",'').strip(),result.split(r',')[1],datetime.datetime.now()])
-    except:
-        pass
-print(str(datetime.datetime.now()) + '\t' + '网址信息保存到csv文件完毕！')
-print('程序即将退出！')
+csv_write.writerow(['编号','url网址','网址名称','浏览次数','数据保存时间'])
+for i in range(len(results)):
+    csv_write.writerow([list(results[i])[0],list(results[i])[1],list(results[i])[2],list(results[i])[3],datetime.datetime.now()])
+print(str(datetime.datetime.now()) + "\t" + "浏览器历史记录数据保存完毕！")
+print("程序即将关闭！")
 time.sleep(2)
