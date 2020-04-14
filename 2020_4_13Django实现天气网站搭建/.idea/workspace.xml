@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6d1d7afa-a11f-41b2-a792-053b058b97a1" name="默认更改列表" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aTXn1RkhwsCPUq41DppqvrvdC1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\Desktop\20200413 - 天气网站搭建\weather" />
+      <recent name="C:\Users\HP\Desktop\20200413 - 天气网站搭建\weather\weather" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d1d7afa-a11f-41b2-a792-053b058b97a1" name="默认更改列表" comment="" />
+      <created>1586760722171</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586760722171</updated>
+      <workItem from="1586760731632" duration="5597000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-18" y="13" key="SettingsEditor" timestamp="1586760789251">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="-18" y="13" key="SettingsEditor/0.0.1360.768@0.0.1360.768" timestamp="1586760789251" />
+    <state width="254" height="198" key="ShowFilterAction_Filter_Popup" timestamp="1586761555287">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="254" height="198" key="ShowFilterAction_Filter_Popup/0.0.1360.768@0.0.1360.768" timestamp="1586761555287" />
+    <state x="683" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1586761555283">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="683" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1360.768@0.0.1360.768" timestamp="1586761555283" />
+  </component>
+</project>
