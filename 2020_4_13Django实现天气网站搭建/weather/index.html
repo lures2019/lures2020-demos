@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{city}}天气信息</title>
+  <style>
+    html,body{
+      height:100%;
+      margin:0;
+      color: white;
+      text-align: center;
+    }
+    body{
+      /*渐变色*/
+      background: linear-gradient(#1078c7,#7196b4);
+    }
+    form{
+      text-align: center;
+    }
+    main img{
+      width: 80px;
+    }
+    h1{
+      margin:5px;
+    }
+    footer{
+      display: flex;
+    }
+    section{
+      flex-grow: 1;
+      border-right:1px solid greenyellow;
+    }
+    section:nth-child(3){
+      border:none;
+    }
+  </style>
+</head>
+<body>
+  <form action="/index/" method="POST">
+    {% csrf_token %}
+    <input name="city" type="text" placeholder="请输入城市">
+    <button type="submit">查询</button>
+  </form>
+  <main>
+    <h2>{{city}}实时天气</h2>
+    <img src="{{weather_data.0.dayPictureUrl}}" alt="">
+    <h1>{{weather_data.0.temperature}}</h1>
+    <div>
+      {{weather_data.0.weather}}<br>
+      {{weather_data.0.wind}}<br>
+      {{weather_data.0.date}}<br>
+    </div>
+  </main>
+  <footer>
+    {% for weather in weather_data %}
+      {% if forloop.counter > 1 %}
+      <section>
+        <h4>{{weather.date}}</h4>
+        <img src="{{weather.dayPictureUrl}}" alt="">
+        <div>
+          {{weather.temperature}}<br>
+          {{weather.weather}}<br>
+          {{weather.wind}}<br>
+        </div>
+      </section>
+      {% endif %}
+    {% endfor %}
+  </footer>
+</body>
+</html>
+
