@@ -29,8 +29,6 @@ def get_now_weather():
             weather = []
             weather.append(str(select.xpath('//dl[@class="temp"]/dd[@class="now"]/text()').get()) + '°C')
             message = select.xpath('//dl[@class="temp"]/dd[@class="txt"]/text()').get()
-            datalist = ['多云', '晴', '小雨', '阴', '中雨']
-            logo = []
             for data in datalist:
                 if data in message:
                     logo.append(data)
