@@ -1,0 +1,8 @@
+print("暗梅幽闻花,")
+print("卧枝伤恨低,")
+print("遥闻卧似水,")
+print("易透达春意。")
+print("\n")
+print("岸似绿,")
+print("岸似透绿,")
+print("岸似透黛绿。")

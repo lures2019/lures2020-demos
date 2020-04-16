@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //判断一个数是不是素数：
+        function isPrime(x){
+            //统计因子的个数，因子个数不是2就说明不是素数
+            var count = 0;
+            for(var i=2;i<=count;i++){
+                if(x % i === 0){
+                    count += 1;
+                }
+            }
+            if(count === 2){
+                return x + "是素数！";
+            }else{
+                return x + "不是素数！";
+            }
+        }
+        document.write(isPrime(parseInt(prompt("请随意输入一个正整数:"))));
+    </script>
+</body>
+</html>
