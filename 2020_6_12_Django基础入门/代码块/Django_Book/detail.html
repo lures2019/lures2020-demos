@@ -1,0 +1,26 @@
+<h1>Book List</h1>
+<table>
+    <tr>
+        <td>书名</td>
+        <td>作者</td>
+        <td>出版社</td>
+        <td>出版时间</td>
+    </tr>
+{% for book in book_list.all %}
+    <tr>
+        <td>{{ book.name }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.pub_house }}</td>
+        <td>{{ book.pub_date }}</td>
+        <td><a href="{% url 'delBook' book.id %}">删除</a></td><!--只添加这一行-->
+    </tr>
+{% endfor %}
+</table>
+
+<form action="/addBook/" method="post" name="addBook">
+    {% csrf_token %}
+    <p><span>书名：</span><input type="text"  name="name"></p>
+    <p><span>作者：</span><input type="text"  name="author"></p>
+    <p><span>出版社：</span><input type="text"  name="pub_house"></p>
+    <input type="submit" value="添加">
+</form>
