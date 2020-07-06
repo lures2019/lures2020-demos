@@ -1,0 +1,3 @@
+﻿  大作业2.cpp
+大作业2.obj : error LNK2005: _main 已经在 大作业1.obj 中定义
+C:\Users\HP\Desktop\通信1804-21-20188277-王智超-软件技术基础大作业\Projects\Debug\Projects.exe : fatal error LNK1169: 找到一个或多个多重定义的符号
