@@ -1,0 +1,6 @@
+nsubj,prefer,I
+dobj,prefer,flight
+det,flight,the
+nmod,flight,morning
+nmod,flight,Denver
+case,Denver,through

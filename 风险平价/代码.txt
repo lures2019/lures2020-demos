@@ -1,0 +1,691 @@
+import pandas as pd
+import numpy as np
+from scipy.optimize import minimize
+
+# evaluate
+import os
+from datetime import datetime
+
+
+def save_data_into_excel(file_name, file_folder, data_df, abs_flag=False, index=0):
+    if not abs_flag:
+        path = os.getcwd() + '/' + file_folder + '/'
+    else:
+        path = file_folder + '/'
+    if not os.path.exists(path):
+        os.makedirs(path)
+    data_df.to_excel(path + file_name + '.xlsx', index=index)
+
+
+def save_data_into_csv(file_name, file_folder, data_df, abs_flag=False, index=0):
+    if not abs_flag:
+        path = os.getcwd() + '/' + file_folder + '/'
+    else:
+        path = file_folder + '/'
+    if not os.path.exists(path):
+        os.makedirs(path)
+    data_df.to_csv(path + file_name + '.csv', encoding="utf-8-sig", index=index)
+
+
+# https://blog.csdn.net/tz_zs/article/details/80335238
+# 最大回撤,基于收益率
+def get_maximum_drawdown(equity_series):
+    index_end = np.argmax(np.maximum.accumulate(equity_series) - equity_series)  # 结束位置
+    if index_end == 0:
+        maximum_drawdown = 0
+    else:
+        index_start = np.argmax(equity_series[:index_end])  # 开始位置
+        maximum_drawdown = equity_series[index_end] - equity_series[index_start]  # 最大回撤
+    return maximum_drawdown
+
+
+# 最大回撤率计算，基于收益率
+def get_maximum_drawdown_ratio(equity_series):
+    index_end = np.argmax(
+        (np.maximum.accumulate(equity_series) - equity_series) / np.maximum.accumulate(equity_series))  # 结束位置
+    if index_end == 0:
+        return 0
+    index_start = np.argmax(equity_series[:index_end])  # 开始位置
+    return ((equity_series[index_start] - equity_series[index_end]) / (equity_series[index_start]))
+
+
+# calmar 比率 http://blog.sina.com.cn/s/blog_678014ab0101bmjk.html
+def get_calmar_ratio(annual_return, max_drawdown_ratio):
+    calmar_ratio = annual_return / max_drawdown_ratio
+    return calmar_ratio
+
+
+# 盈亏比
+# http://www.360doc.com/content/12/0828/16/235269_232827690.shtml
+# http://www.360doc.com/content/12/0828/16/235269_232827690.shtml
+def get_earnings_risk_ratio(return_series):
+    if len(return_series[return_series < 0]) == 0:
+        earnings_risk_ratio = np.nan
+    else:
+        earnings_risk_ratio = (return_series[return_series > 0]).mean() / (return_series[return_series < 0]).mean()
+    return earnings_risk_ratio
+
+
+# 单期最大盈利
+def get_max_profit(return_series):
+    max_profit = return_series.max()
+    return max_profit
+
+
+# 单期最大亏损
+def get_min_profit(return_series):
+    min_profit = return_series.min()
+    return min_profit
+
+
+# 夏普比率计算 https://zhidao.baidu.com/question/344088546.html
+def get_sharpe_ratio(return_series, marr):
+    sharpe_ratio = (return_series.mean() - marr) / return_series.std()
+    return sharpe_ratio
+
+
+# 下行偏差 http://bbs.pinggu.org/thread-4184460-1-1.html
+def get_downside_deviation(return_series, marr):
+    downside_deviation = np.array([min(return_series[i] - marr, 0) ** 2 for i in range(len(return_series))]).mean()
+    return downside_deviation
+
+
+# 索提诺比率  https://www.sohu.com/a/130590013_467136
+def get_sortino_ratio(return_series, marr, downside_deviation):
+    sortino_ratio = (return_series.mean() - marr) / np.sqrt(downside_deviation)
+    return sortino_ratio
+
+
+# 1: daily updown time series updown_series = today_price - yeseterday_price
+# 2: daily updown ratio time series return_series = updown_series / 100
+# 3: daily return ratio time series equity_series = (return_series+1).cumprod()
+# time_type: daily, weekly, monthly, yearly,
+def get_profit_evaluation_summary(data_series, date_series, data_type=4, time_type="daily",
+                                  time_format="%Y%m%d", marr=3.4,
+                                  year_day_num=252):
+    annual_return = 0
+    annual_volatility = 0
+    information_ratio = 0
+    total_times = 0
+    winning_ratio = 0
+    maximum_drawdown = 0
+    maximum_drawdown_ratio = 0
+    calmar_ratio = 0
+    earn_risk_ratio = 0
+    single_max_profit = 0
+    single_min_profit = 0
+    sharpe_ratio = 0
+    downside_deviation = 0
+    sortino_ratio = 0
+
+    if time_type == "daily":
+        # 输入数据为：原始的总权益变化
+        if data_type == 1:
+            updown_series = data_series.diff().fillna(0)
+            equity_series = (data_series.pct_change().fillna(0) + 1).cumprod()
+            return_series = data_series.pct_change().fillna(0)
+        if data_type == 2:
+            updown_series = data_series - data_series.shift(1)
+            equity_series = (updown_series / 100 + 1).cumprod()
+            return_series = updown_series / 100
+        elif data_type == 3:
+            equity_series = (data_series / 100 + 1).cumprod()
+            return_series = data_series / 100
+        elif data_type == 4:
+            equity_series = (data_series + 1).cumprod()
+            return_series = data_series
+        else:
+            pass
+        if max(equity_series) == 1 and min(equity_series) == 1:
+            pass
+        else:
+            trade_year = ((datetime.strptime(date_series[len(date_series) - 1], time_format) - datetime.strptime(
+                date_series[0],
+                time_format)).days) / 365
+            # 年化收益率
+            annual_return = equity_series[len(equity_series) - 1] ** (1 / trade_year) - 1
+            # 年化波动率
+            annual_volatility = np.std(return_series) * np.sqrt(year_day_num)
+            # 信息比率
+            information_ratio = annual_return / annual_volatility
+            # 交易次数
+            total_times = sum(return_series != 0)
+            # 胜率
+            winning_ratio = sum(return_series > 0) / sum(return_series != 0)
+            # 最大回撤
+            maximum_drawdown = get_maximum_drawdown(equity_series)
+            # 最大回撤率
+            maximum_drawdown_ratio = get_maximum_drawdown_ratio(equity_series)
+            # calmar 比率
+            calmar_ratio = get_calmar_ratio(annual_return, maximum_drawdown_ratio)
+            # 收益风险比率
+            earn_risk_ratio = get_earnings_risk_ratio(return_series)
+            # 单笔最大盈利
+            single_max_profit = get_max_profit(return_series)
+            # 单笔最大亏损
+            single_min_profit = get_min_profit(return_series)
+            # 夏普比率
+            sharpe_ratio = get_sharpe_ratio(return_series, marr)
+            # 下行偏差
+            downside_deviation = get_downside_deviation(return_series, marr)
+            # 索提诺比率
+            sortino_ratio = get_sortino_ratio(return_series, marr, downside_deviation)
+            # 最高日收益率
+            max_return = data_series.max()
+            # 最低日收益率
+            min_return = data_series.min()
+            # 偏度
+            skew_return = data_series.skew()
+            # 峰度
+            kurt_return = data_series.kurt()
+
+    evaluation_index_dict = {"annual_return": annual_return,
+                             "annual_volatility": annual_volatility,
+                             "information_ratio": information_ratio,
+                             "total_times": total_times,
+                             "winning_ratio": winning_ratio,
+                             "maximum_drawdown": maximum_drawdown,
+                             "maximum_drawdown_ratio": maximum_drawdown_ratio,
+                             "calmar_ratio": calmar_ratio,
+                             "earn_risk_ratio": earn_risk_ratio,
+                             "single_max_profit": single_max_profit,
+                             "single_min_profit": single_min_profit,
+                             "sharpe_ratio": sharpe_ratio,
+                             "downside_deviation": downside_deviation,
+                             "max_return": max_return,
+                             "min_return": min_return,
+                             "skew_return": skew_return,
+                             "kurt_return": kurt_return,
+                             }
+    return evaluation_index_dict
+
+
+# 组合收益评估
+def get_equity_evaluate(portfolio_return_df, marr=3.4, year_day_num=252):
+    equity_evaluate_dict = {
+        "portfolio_type": [],
+    }
+    for portfolio_type in portfolio_return_df.columns:
+        equity_evaluate_dict["portfolio_type"].append(portfolio_type)
+        data_series = portfolio_return_df[portfolio_type]
+        date_series = portfolio_return_df.index.astype(np.str)
+        time_format = "%Y-%m-%d"
+        result_dict = get_profit_evaluation_summary(data_series, date_series, data_type=4, time_type="daily",
+                                                    time_format=time_format, marr=marr,
+                                                    year_day_num=year_day_num)
+        for item_name, item_value in result_dict.items():
+            if item_name not in equity_evaluate_dict.keys():
+                equity_evaluate_dict[item_name] = []
+            equity_evaluate_dict[item_name].append(item_value)
+    equity_evaluate_df = pd.DataFrame(equity_evaluate_dict)
+    save_data_into_csv("portfolio_equity_evaluate", "009 portfolio_evaluate", equity_evaluate_df, abs_flag=False,
+                       index=0)
+    return equity_evaluate_df
+
+
+
+
+
+
+# function
+import os
+import re
+import shutil
+import pickle
+import time
+import traceback
+import seaborn as sns
+import statsmodels.api as sm
+import matplotlib.pyplot as plt
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+import zipfile
+
+plt.rcParams['font.sans-serif'] = ['KaiTi']  # 指定默认字体
+plt.rcParams['axes.unicode_minus'] = False  # 解决保存图像是负号'-'显示为方块的问题
+
+
+###################################################获取文件信息#########################################################
+# 获取指定文件夹下特定格式的所有文件
+def get_folder_files_list(file_folder, abs_dir_flag=False, file_type=['.csv']):
+    if abs_dir_flag:
+        path = file_folder + '\\'
+    else:
+        path = os.getcwd() + '\\' + file_folder + '\\'
+    files_list = []
+    if not os.path.exists(path):
+        return files_list
+    for file_name in os.listdir(path):
+        if os.path.splitext(file_name)[1] in file_type:
+            index = file_name.rfind(".")
+            files_list.append([file_name[:index], path + file_name])
+    return files_list
+
+
+# get files dictionary
+def get_folder_files_dict(file_folder, abs_dir_flag=False, file_type=['.xlsx']):
+    if abs_dir_flag:
+        path = file_folder + '\\'
+    else:
+        path = os.getcwd() + '\\' + file_folder + '\\'
+    files_dict = {}
+    if not os.path.exists(path):
+        return files_dict
+    for file_name in os.listdir(path):
+        if os.path.splitext(file_name)[1] in file_type:
+            index = file_name.find(".")
+            files_dict[file_name[:index]] = path + file_name
+    return files_dict
+
+
+##############################################获取文件夹信息############################################################
+# 获取有效文件夹
+def get_folder_info_list(root_folder, abs_flag=True):
+    folder_list = []
+    if not abs_flag:
+        root_folder = os.getcwd() + "\\" + root_folder
+    if not os.path.exists(root_folder):
+        return folder_list
+    for folder_name in os.listdir(root_folder):
+        if os.path.isdir(root_folder + "\\" + folder_name):
+            folder_list.append([folder_name, root_folder + "\\" + folder_name])
+    return folder_list
+
+
+def get_folder_info_dict(root_folder, abs_flag=True):
+    folder_dict = {}
+    if not abs_flag:
+        root_folder = os.getcwd() + "\\" + root_folder
+    if not os.path.exists(root_folder):
+        return folder_dict
+    for folder_name in os.listdir(root_folder):
+        if "." not in folder_name:
+            folder_dict[folder_name] = [root_folder + "\\" + folder_name]
+    return folder_dict
+
+
+##################################################获取文件数据内容######################################################
+def get_file_for_orth(file_info):
+    df1 = pd.read_excel(file_info)
+    df1['re'] = df1['中证全指'] / df1['中证全指'].shift(1) - 1
+    df1['rb'] = df1['中证全债'] / df1['中证全债'].shift(1) - 1
+    df1['rg'] = df1['COMEX黄金'] / df1['COMEX黄金'].shift(1) - 1
+    df1 = df1.dropna().reset_index(drop=True)
+
+    r = df1.loc[:, ['re','rb','rg']]
+    return r
+def get_pkl_file_data(file_info, file_folder="", path_type="", file_type="pkl", encode_type="utf-8", open_mode="rb"):
+    # file info 是完整的路径
+    if path_type == "FULL":
+        file_path = file_info
+    # file info 仅是文件名，file_folder是绝对路径
+    elif path_type == "ABSOLUTE":
+        file_path = file_folder + "\\" + file_info + "." + file_type
+    # 默认的第三种是 file_info 是文件名， file_folder是相对路径
+    else:
+        file_path = os.getcwd() + "\\" + file_folder + "\\" + file_info + "." + file_type
+    file_data = pickle.load(open(file_path.encode(encode_type), open_mode))
+    return file_data
+
+
+def get_csv_file_data(file_info, file_folder="", path_type="", file_type="csv", encode_type="utf-8", open_mode="rb",
+                      encoding_code="utf-8", date_list=[], header_flag="infer"):
+    # file info 是完整的路径
+    if path_type == "FULL":
+        file_path = file_info
+    # file info 仅是文件名，file_folder是绝对路径
+    elif path_type == "ABSOLUTE":
+        file_path = file_folder + "\\" + file_info + "." + file_type
+    # 默认的第三种是 file_info 是文件名， file_folder是相对路径
+    else:
+        file_path = os.getcwd() + "\\" + file_folder + "\\" + file_info + "." + file_type
+    file_data = pd.read_csv(open(file_path.encode(encode_type), open_mode), parse_dates=date_list,
+                            encoding=encoding_code, header=header_flag)
+    if 'Unnamed: 0' in file_data.columns:
+        file_data = file_data.drop('Unnamed: 0', axis=1)
+    return file_data
+
+
+def get_excel_file_data(file_info, file_folder="", path_type="", file_type="xlsx", encode_type="utf-8", open_mode="rb",
+                        encoding_code="utf-8", date_list=[], header_flag="infer", sheet_name="Sheet1"):
+    # file info 是完整的路径
+    if path_type == "FULL":
+        file_path = file_info
+    # file info 仅是文件名，file_folder是绝对路径
+    elif path_type == "ABSOLUTE":
+        file_path = file_folder + "\\" + file_info + "." + file_type
+    # 默认的第三种是 file_info 是文件名， file_folder是相对路径
+    else:
+        file_path = os.getcwd() + "\\" + file_folder + "\\" + file_info + "." + file_type
+    file_data = pd.read_excel(open(file_path.encode(encode_type), open_mode), parse_dates=date_list,
+                              encoding=encoding_code, header=header_flag, sheet_name=sheet_name)
+    if 'Unnamed: 0' in file_data.columns:
+        file_data = file_data.rename(columns={'Unnamed: 0': 'time'}).set_index('time')
+    return file_data
+
+
+#############################################保存数据内容################################################################
+def save_data_into_csv(file_name, file_folder, data_df, abs_flag=False, index=0):
+    if not abs_flag:
+        path = os.getcwd() + '/' + file_folder + '/'
+    else:
+        path = file_folder + '/'
+    if not os.path.exists(path):
+        os.makedirs(path)
+    data_df.to_csv(path + file_name + '.csv', encoding="utf-8-sig", index=index)
+
+
+def save_data_into_pkl(file_name, file_folder, data):
+    path = os.getcwd() + '/' + file_folder + '/'
+    if not os.path.exists(path):
+        os.makedirs(path)
+    pickle.dump(data, open(file_folder + "\\" + file_name + ".pkl", 'wb'))
+
+
+def save_data_into_txt(file_name, file_folder, data_str):
+    path = os.getcwd() + '/' + file_folder + '/'
+    if not os.path.exists(path):
+        os.makedirs(path)
+    txt_file = open(file_name + '.txt', 'w')
+    txt_file.write(data_str)
+    txt_file.close()
+
+
+def save_data_into_log(log_content, log_folder="log_record", log_name="running_log", ):
+    path = os.getcwd() + '/' + log_folder + "/"
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+    file_name = path + log_name + "_" + time.strftime("%Y%m%d", time.localtime()) + ".txt"
+
+    log_line = time.asctime(time.localtime(time.time())) + "\t" + log_content + "\n"
+    f = open(file_name, 'a')
+    f.write(log_line)
+    f.close()
+
+
+# 获取原始数据
+def get_original_data():
+    # 获取文件夹下的文件列表
+    files_dict = get_folder_files_dict("001 original_data", abs_dir_flag=False, file_type=['.xlsx'])
+    for file_name, file_path in files_dict.items():
+        original_data_df = get_excel_file_data(file_path, file_folder="", path_type="FULL", file_type="xlsx",
+                                               encode_type="utf-8", open_mode="rb", encoding_code="utf-8",
+                                               date_list=[], header_flag="infer", sheet_name="Sheet1")
+    return original_data_df
+
+
+# 获取收益率序列（数据及图表）
+def get_return_data(original_data_df, image_folder="002 return_data"):
+    data_df = original_data_df.pct_change().fillna(0)
+    fig = plt.figure()
+    data_df.plot()
+    plt.title("daily_return")
+    plt.legend(loc="best")
+    plt.grid(True)
+    path = os.getcwd() + "\\" + image_folder + '\\'
+    if not os.path.exists(path):
+        os.makedirs(path)
+    plt.savefig(path + "\\" + 'daily_return.png', format='png')
+    plt.close()
+    save_data_into_csv('daily_return', image_folder, data_df, abs_flag=False, index=1)
+    return data_df
+
+
+# 获取对数收益率序列（数据及图表）
+def get_log_return(original_data_df, image_folder="003 log_return"):
+    data_df = np.log(original_data_df) - np.log(original_data_df.shift())
+    fig = plt.figure()
+    data_df.plot()
+    plt.title("daily log return")
+    plt.legend(loc="best")
+    plt.grid(True)
+    path = os.getcwd() + "\\" + image_folder + '\\'
+    if not os.path.exists(path):
+        os.makedirs(path)
+    plt.savefig(path + "\\daily_log_return.png", format='png')
+    plt.close()
+    save_data_into_csv('daily_log_return', image_folder, data_df, abs_flag=False, index=1)
+    return data_df
+
+
+# 获取资产净值序列（数据及图表）
+def get_net_worth(original_data_df, image_folder="004 net_worth"):
+    data_df = (original_data_df.pct_change().fillna(0) + 1).cumprod()
+    fig = plt.figure()
+    data_df.plot()
+    plt.title("daily net worth")
+    plt.legend(loc="best")
+    plt.grid(True)
+    path = os.getcwd() + "\\" + image_folder + '\\'
+    if not os.path.exists(path):
+        os.makedirs(path)
+    plt.savefig(path + "\\daily_net_worth.png", format='png')
+    plt.close()
+    save_data_into_csv('daily_net_worth', image_folder, data_df, abs_flag=False, index=1)
+    return data_df
+
+
+# 净值相关性分析
+def get_net_worth_corr(net_worth_df, image_folder="005 net_worth_corr"):
+    data_df = net_worth_df.corr()
+    plt.figure()
+    ax = sns.heatmap(data_df, annot=True, annot_kws={'size': 16, 'weight': 'bold'})
+    plt.title("daily net worth")
+    path = os.getcwd() + "\\" + image_folder + '\\'
+    if not os.path.exists(path):
+        os.makedirs(path)
+    plt.savefig(path + "\\daily_net_worth_corr.png", format='png')
+    plt.close()
+    save_data_into_csv('daily_net_worth_corr', image_folder, data_df, abs_flag=False, index=1)
+    return data_df
+
+
+
+
+
+
+
+
+
+# model
+import os
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import StandardScaler
+from scipy.optimize import minimize
+from matplotlib.pyplot import MultipleLocator
+
+
+# 从pyplot导入MultipleLocator类，这个类用于设置刻度间隔
+
+# 对数收益率标准化
+def get_standardized_log_return(log_return_df, data_folder="006 standardized_log_return"):
+    data_df = log_return_df
+    scaler = StandardScaler()
+    scaler.fit(data_df)
+    std_data_df = pd.DataFrame(scaler.transform(data_df), columns=data_df.columns, index=data_df.index)
+    save_data_into_csv('standardized_daily_log_return', data_folder, std_data_df,
+                           abs_flag=False, index=1)
+    return std_data_df
+
+
+# 获取历史协方差矩阵
+def get_historical_covariance(history_data_df):
+    return history_data_df.cov()
+
+
+# 计算组合风险
+def get_portfolio_var(rc_weight, covariance_nda):
+    weight_matrix = np.matrix(rc_weight)
+    return (weight_matrix * covariance_nda * weight_matrix.T)[0, 0]
+
+
+# 计算单个资产对总体风险的贡献度
+def get_risk_contribution(rc_weight, covariance_nda):
+    weight_matrix = np.matrix(rc_weight)
+    # 总体风险的平方根
+    sigma = np.sqrt(get_portfolio_var(rc_weight, covariance_nda))
+    # 边际风险贡献
+    mrc_matrix = rc_weight * weight_matrix.T
+    # 风险贡献
+    rc_matrix = np.multiply(mrc_matrix, weight_matrix.T) / sigma
+    return rc_matrix
+
+
+# 优化问题的约束条件1：总权重
+def total_weight_constraint(weight_nda):
+    return np.sum(weight_nda) - 1.0
+
+
+def long_only_constraint(weight_nda):
+    return weight_nda
+
+
+# 风险平价模型要求组合内单个资产对总体风险的贡献度相等，计算风险平价组合的单个资产权重，属于二次优化问题，
+# 基于风险预算的目标函数
+def risk_budget_objective(initial_rc, params_list):
+    E=params_list[0]
+    w=initial_rc
+    target = ((E.T@w)[0,0] * (E.T@V@w)[0,0] -(E.T@w)[0,1] * (E.T@V@w)[0,1])**2 +\
+         ((E.T@w)[0,0] * (E.T@V@w)[0,0] -(E.T@w)[0,2] * (E.T@V@w)[0,2])**2 +\
+         ((E.T@w)[0,1] * (E.T@V@w)[0,1] -(E.T@w)[0,2] * (E.T@V@w)[0,2])**2 
+    return target
+
+
+# 根据资产预期目标风险贡献度来计算各资产的权重
+def get_assets_weight(initial_rc, covariance_nda, target_rc):
+    # weight_nda 资产初始配置权重
+    # target_rc 资产风险贡献度的目标权重（即相等权重）
+    # 优化问题的约束条件
+    
+    # 调用二次添加的自定义函数获取数据
+    # 基于正交变换下的风险平价
+    r=get_file_for_orth(r"001 original_data\2010-2020.06(1).xlsx")
+    V = np.matrix(np.cov(r, rowvar=False))
+    E = np.linalg.eig(V)[1]
+    
+    cons = ({'type': 'eq', 'fun': total_weight_constraint})
+    bnds = ((0,1),(0,1),(0,1))
+    optimized_result = minimize(risk_budget_objective,initial_rc, args=[E], method='SLSQP',
+                                constraints=cons,bounds=bnds,tol=1e-20)
+    rb_weight = np.asmatrix(optimized_result.x)
+    print(optimized_result.x)
+    return rb_weight
+
+
+# 获取风险平价模型的数据
+def get_risk_equal_data(original_data_df, initial_rc, target_rc, his_standardized_log_return_df,assets_weight):
+    risk_equal_df = pd.DataFrame(columns=(["数据类型"] + original_data_df.columns.tolist()))
+    risk_equal_df.loc[len(risk_equal_df)] = ["原始风险贡献比例"] + initial_rc
+    risk_equal_df.loc[len(risk_equal_df)] = ["风险平价贡献比例"] + target_rc
+    risk_equal_df.loc[len(risk_equal_df)] = ["各资产历史波动率"] + his_standardized_log_return_df.std().values.tolist()
+    risk_equal_df.loc[len(risk_equal_df)] = ["风险平价资产配置"] + assets_weight
+    save_data_into_csv('risk_parity_detail', "007 risk_parity", risk_equal_df, abs_flag=False, index=1)
+    for i in range(len(risk_equal_df)):
+        risk_equal_df.iloc[i, 1:].plot(kind="bar")
+        plt.title(risk_equal_df.iloc[i, 0])
+        plt.legend(loc="best")
+        plt.grid(True)
+        path = os.getcwd() + "\\007 risk_parity\\"
+        if not os.path.exists(path):
+            os.makedirs(path)
+        plt.savefig(path + "\\" + risk_equal_df.iloc[i, 0] + ".png", format='png')
+        plt.close()
+    return risk_equal_df
+
+
+# 获取各资产净值曲线
+def get_portfolio_equity(price_data_df, assets_weight):
+    # 资产净值
+    profit_data_df = (price_data_df.pct_change().fillna(0) + 1).cumprod()
+    profit_data_df["资产等权配置"] = profit_data_df.iloc[:, :3].mean(axis=1)
+    profit_data_df["风险平价配置"] = profit_data_df.iloc[:, :3].mul(assets_weight, axis=1).sum(axis=1)
+    save_data_into_csv('组合净值曲线序列', "008 portfolio_equity", profit_data_df, abs_flag=False, index=1)
+    profit_data_df.plot(kind="line")
+    y_major_locator = MultipleLocator(0.05)
+    # 把x轴的刻度间隔设置为1，并存在变量里
+    ax = plt.gca()
+    # ax为两条坐标轴的实例
+    ax.yaxis.set_major_locator(y_major_locator)
+    plt.ylim(0.95, 1.4)
+    plt.legend(loc="best")
+    # plt.show()
+    path = os.getcwd() + "\\008 portfolio_equity\\"
+    if not os.path.exists(path):
+        os.makedirs(path)
+    plt.savefig(path + "\\组合净值曲线序列.png", format='png')
+    plt.close()
+    # 资产收益率
+    return_data_df = price_data_df.pct_change().fillna(0)
+    return_data_df["资产等权配置"] = return_data_df.iloc[:, :3].mean(axis=1)
+    return_data_df["风险平价配置"] = return_data_df.iloc[:, :3].mul(assets_weight, axis=1).sum(axis=1)
+    save_data_into_csv('组合收益率曲线序列', "008 portfolio_equity", return_data_df, abs_flag=False, index=1)
+    return_data_df.plot(kind="line")
+    plt.legend(loc="best")
+    # plt.show()
+    path = os.getcwd() + "\\008 portfolio_equity\\"
+    if not os.path.exists(path):
+        os.makedirs(path)
+    plt.savefig(path + "\\组合收益率曲线序列.png", format='png')
+    plt.close()
+    return {
+        "资产净值": profit_data_df,
+        "资产收益率": return_data_df,
+    }
+
+
+
+
+
+
+# 参考链接：
+# https://www.sohu.com/a/280691499_750247(等权、等波动率、风险平价、主成分风险平价)
+# https://blog.csdn.net/lesleychu/article/details/79492001?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~first_rank_v2~rank_v25-2-79492001.nonecase&utm_term=%E9%A3%8E%E9%99%A9%E5%B9%B3%E4%BB%B7%E6%A8%A1%E5%9E%8B
+# https://cloud.tencent.com/developer/article/1397794
+# https://blog.csdn.net/bigquant/article/details/88363754
+
+
+###### 参数设置
+# 读取原始数据(收盘价)
+original_data_df = get_original_data()
+
+# 获取收益率序列（数据及图表）
+return_data_df = get_return_data(original_data_df, image_folder="002 return_data")
+
+# 获取对数收益率序列（数据及图表）
+log_return_df = get_log_return(original_data_df, image_folder="003 log_return")
+
+# 获取资产净值序列（数据及图表）
+net_worth_df = get_net_worth(original_data_df, image_folder="004 net_worth")
+
+# 资产净值相关性分析
+net_worth_corr_df = get_net_worth_corr(net_worth_df, image_folder="005 net_worth_corr")
+
+# 对数收益率标准化
+standardized_log_return_df = get_standardized_log_return(log_return_df,
+                                                             data_folder="006 standardized_log_return")
+
+# 获取历史协方差矩阵
+historical_covariance = get_historical_covariance(standardized_log_return_df.loc[:"2018", ]).values
+
+# 资产风险贡献度目标权重
+target_rc = [1 / len(historical_covariance) for i in range(len(historical_covariance))]
+
+# 资产风险贡献度初始权重
+initial_rc = (standardized_log_return_df.loc[:"2018", ].std() / standardized_log_return_df.loc[
+                                                                :"2018", ].std().sum()).values.tolist()
+# 根据风险平价获取资产的配置权重
+assets_weight = get_assets_weight(initial_rc, historical_covariance, target_rc).tolist()[0]
+
+# 获取风险平价模型的数据
+risk_equal_df = get_risk_equal_data(original_data_df, initial_rc, target_rc,
+                                        standardized_log_return_df.loc[:"2018", ], assets_weight)
+
+# 获取各组合资产净值
+portfolio_profit_dict = get_portfolio_equity(original_data_df.loc["2019":"2019", ], assets_weight)
+# 资产净值
+portfolio_equity_df = portfolio_profit_dict["资产净值"]
+# 资产收益率
+portfolio_return_df = portfolio_profit_dict["资产收益率"]
+
+# 计算各组合资产净值变化的评价指标
+equity_evaluate_df = get_equity_evaluate(portfolio_return_df, marr=3.4, year_day_num=252)

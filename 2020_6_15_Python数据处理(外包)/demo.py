@@ -33,7 +33,7 @@ if not os.path.exists(path):
 """
 def according_wind_speed(x):
     # 以列表的形式呈现出所有的Excel文件
-    xls_tables = os.listdir('附件1  平均风速和风电场日实际输出功率表')
+    xls_tables = os.listdir(r'D:\lures2020-demos\2020_6_15_Python数据处理(外包)\附件1  平均风速和风电场日实际输出功率表')
     hours = 0
     speed = x
     # 统计每月的电场平均风速和平均速率的分布情况
@@ -42,12 +42,15 @@ def according_wind_speed(x):
     # 统计每天的电场平均风速和平均速率的分布情况
     days_winds = []
     days_powers = []
+    # 全年风速和全年功率
+    year_wind = 0
+    days = 0
+    year_power = 0
 
     for name in xls_tables:
         # 月风速和功率统计
         months_wind = 0
         months_power = 0
-        days = 0
 
         xls_table = xlrd.open_workbook('附件1  平均风速和风电场日实际输出功率表/{}'.format(name))
         # 以列表的形式呈现出返回的xls文件的所有表名
@@ -87,7 +90,9 @@ def according_wind_speed(x):
                         f.close()
                         months_wind += float(values_now[num])
                         day_wind += float(values_now[num])
+                        year_wind += float(values_now[num])
                         months_power += float(values_list[j])
+                        year_power += float(values_list[j])
                         day_power += float(values_list[j])
                         # 如果满足大于6m/s的条件，就增加0.25h
                         if (float(values_now[num]) > speed):
@@ -106,8 +111,10 @@ def according_wind_speed(x):
                         if (float(values_list[j]) > 160):
                             months_power += 160
                             day_power += 160
+                            year_power += 160
                             months_wind += float(values_list[j + 1])
                             day_wind += float(values_list[j + 1])
+                            year_wind += float(values_list[j + 1])
                             worksheet.write(i, j - 1, values_list[j - 1])
                             worksheet.write(i, j, 160)
                             worksheet.write(i, j + 1, values_list[j + 1])
@@ -116,8 +123,10 @@ def according_wind_speed(x):
                             worksheet.write(i, j, values_list[j])
                             months_wind += 32
                             day_wind += 32
+                            year_wind += 32
                             months_power += float(values_list[j])
                             day_power += float(values_list[j])
+                            year_power += float(values_list[j])
                             worksheet.write(i, j + 1, 32)
                     else:
                         if (float(values_list[j + 1]) > speed):
@@ -126,16 +135,22 @@ def according_wind_speed(x):
                         worksheet.write(i, j, values_list[j])
                         worksheet.write(i, j + 1, values_list[j + 1])
                         months_power += float(values_list[j])
+                        year_power += float(values_list[j])
                         day_power += float(values_list[j])
                         months_wind += float(values_list[j + 1])
+                        year_wind += float(values_list[j+1])
                         day_wind += float(values_list[j + 1])
             days_powers.append(day_power)
             days_winds.append(day_wind)
+        days += 1
         workbook.save(path + '/' + name)
         months_winds.append(months_wind)
         months_powers.append(months_power)
     if(speed == 6):
-        return(hours,days_winds,days_powers,months_winds,months_powers)
+        # 一天24小时，一小时60分钟
+        return(hours,days_winds,days_powers,months_winds,months_powers,year_wind/days/1440,year_power/days/1440)
+    elif(speed == 5):
+        return (hours, days_winds, days_powers, months_winds, months_powers, year_wind / days / 1440, year_power / days / 1440)
     else:
         return(hours)
 
@@ -148,9 +163,10 @@ def according_wind_speed(x):
 """
 
 
-# Step3、将第二问中的以天、月为单位统计的电场平均风速和平均功率的分布情况进行可视化
-hours,days_winds,days_powers,months_winds,months_powers = according_wind_speed(6)
-print("全年各分场风速超过6m/s的总小时数有{}h".format(hours))
+# Step3、将第二问中的以天、月为单位统计的电场平均风速和平均功率的分布情况进行可视化   6m/s的数据
+hours,days_winds,days_powers,months_winds,months_powers,average_wind,average_power = according_wind_speed(6)
+print("全年各分场风速超过6m/s的总小时数有{}h,全年的平均风速是：{}，全年的平均功率是：{}".format(hours,average_wind,average_power))
+
 x1 = range(0, 365)
 plt.plot(x1, days_powers, label='按天分布的功率折线图')
 plt.xlabel('days')
@@ -191,10 +207,58 @@ plt.legend()
 plt.savefig(path + '/' + 'months_winds.png')
 plt.show()
 
+
+# Step4、以散点图形式分别按天和按月对风速大于5m/s的时长数据，进行可视化
+hours_5,days_winds_5,days_powers_5,months_winds_5,months_powers_5,average_wind_5,average_power_5 = according_wind_speed(6)
+
+x3 = range(0, 365)
+plt.scatter(x3, days_powers_5, label='按天分布的功率散点图')
+plt.xlabel('days')
+plt.ylabel('powers_5')
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
+plt.title('days_powers_5')
+plt.legend()
+plt.savefig(path + '/' + 'days_powers_5.png')
+plt.show()
+plt.scatter(x3, days_winds_5, label='按天分布的风速折线图')
+plt.xlabel('days')
+plt.ylabel('winds_5')
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
+plt.title('days_winds_5')
+plt.legend()
+plt.savefig(path + '/' + 'days_winds_5.png')
+plt.show()
+
+
+x4 = range(1, 13)
+plt.scatter(x4, months_powers_5, label='按月分布的功率折线图')
+plt.xlabel('months')
+plt.ylabel('powers_5')
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
+plt.title('months_powers_5')
+plt.legend()
+plt.savefig(path + '/' + 'months_powers_5.png')
+plt.show()
+plt.scatter(x4, months_winds_5, label='按月分布的风速散点图')
+plt.xlabel('months')
+plt.ylabel('winds_5')
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False  # 用来正常显示负号
+plt.title('months_winds_5')
+plt.legend()
+plt.savefig(path + '/' + 'months_winds_5.png')
+plt.show()
+
+
 hours_new = []
 for x in [3,4,5,6,7,8,9,10]:
     if (x == 6):
         hours_new.append(hours)
+    elif (x == 5):
+        hours_new.append(hours_5)
     else:
         hours_new.append(according_wind_speed(x))
 x3 = range(3, 11)
@@ -209,4 +273,4 @@ plt.savefig(path + '/' + 'wind_speed_hours.png')
 plt.show()
 
 
-# Step4、请尝试利用提供的数据对该风电场的风能资源及其利用情况进行评估。
+

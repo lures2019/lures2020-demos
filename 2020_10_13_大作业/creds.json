@@ -1,0 +1,14 @@
+{
+  "mysql": {
+            "user": "nostudent", 
+            "pass": "nostudent",
+            "server": "hadoop.mathsci.denison.edu",
+            "scheme": "mysql+mysqlconnector",
+            "database": "book"
+            },
+  "sqlite": {
+    "dbdir": "../../dbfiles",
+    "database": "book",
+    "scheme": "sqlite"
+  }
+}
