@@ -1,45 +1,46 @@
 ﻿国家中文名称,国家英文名称,现存确诊,累计确诊,治愈,死亡
-伊朗,Iran (Islamic Republic of),16715,29406,10457,2234
-韩国,Republic of Korea,4665,9332,4528,139
-中国,China,4045,82080,74737,3298
-土耳其,Turkey,3528,3629,26,75
-以色列,Israel,2615,2693,70,8
-马来西亚,Malaysia,1793,2031,215,23
-巴基斯坦,Pakistan,1149,1179,21,9
-日本,Japan,992,1398,359,47
-沙特阿拉伯,Saudi Arabia,980,1012,29,3
-泰国,Thailand,971,1045,70,4
-印度尼西亚,Indonesia,806,893,9,78
-菲律宾,Philippines,634,707,28,45
-印度,India,634,694,44,16
-新加坡,Singapore,509,683,172,2
-卡塔尔,Qatar,506,549,43,0
-黎巴嫩,Lebanon,342,368,20,6
-阿联酋,United Arab Emirates,279,333,52,2
-亚美尼亚,Armenia,272,290,18,0
-巴林,Bahrain,249,457,204,4
-伊拉克,Iraq,239,382,107,36
-约旦,Jordan,211,212,1,0
-科威特,Kuwait,159,208,49,0
-越南,Vietnam,136,153,17,0
-塞浦路斯,Cyprus,129,132,0,3
-文莱,Brunei Darussalam,109,114,5,0
-哈萨克斯坦,Kazakhstan,108,111,2,1
-阿塞拜疆,Azerbaijan,104,122,15,3
-斯里兰卡,Sri Lanka,100,106,6,0
-柬埔寨,Cambodia,94,96,2,0
-阿富汗,Afghanistan,92,94,0,2
-阿曼,Oman,86,109,23,0
-巴勒斯坦,occupied Palestinian territory,67,84,16,1
-格鲁吉亚,Georgia,67,77,10,0
-乌兹别克斯坦,Uzbekstan,65,65,0,0
-吉尔吉斯斯坦,Kyrgyzstan,44,44,0,0
-孟加拉国,Bangladesh,28,44,11,5
-马尔代夫,Maldives,13,13,0,0
-蒙古,Mongolia,11,11,0,0
-老挝,Laos,6,6,0,0
-叙利亚,Syrian ArabRepublic,5,5,0,0
-缅甸,Myanmar,5,5,0,0
-尼泊尔,Nepal,2,3,1,0
-不丹,Bhutan,2,2,0,0
-东帝汶,Tinor-Leste,1,1,0,0
+土耳其,Turkey,65461,74193,7089,1643
+伊朗,Iran (Islamic Republic of),20897,77995,52229,4869
+印度,India,10824,12759,1515,420
+以色列,Israel,9992,12758,2624,142
+日本,Japan,8702,9296,404,190
+巴基斯坦,Pakistan,5345,6919,1446,128
+沙特阿拉伯,Saudi Arabia,5307,6380,990,83
+菲律宾,Philippines,4863,5660,435,362
+阿联酋,United Arab Emirates,4695,5825,1095,35
+印度尼西亚,Indonesia,4472,5516,548,496
+新加坡,Singapore,3734,4427,683,10
+卡塔尔,Qatar,3298,3711,406,7
+韩国,Republic of Korea,2576,10635,7829,230
+马来西亚,Malaysia,2332,5182,2766,84
+中国,China,1872,83824,78600,3352
+科威特,Kuwait,1296,1524,225,3
+乌兹别克斯坦,Uzbekstan,1260,1349,85,4
+哈萨克斯坦,Kazakhstan,1141,1295,138,16
+孟加拉国,Bangladesh,1139,1231,42,50
+泰国,Thailand,1033,2672,1593,46
+巴林,Bahrain,988,1698,703,7
+阿曼,Oman,839,1019,176,4
+亚美尼亚,Armenia,820,1135,297,18
+阿塞拜疆,Azerbaijan,808,1283,460,15
+阿富汗,Afghanistan,725,794,40,29
+塞浦路斯,Cyprus,718,735,0,17
+黎巴嫩,Lebanon,557,663,85,21
+伊拉克,Iraq,498,1434,856,80
+吉尔吉斯斯坦,Kyrgyzstan,394,466,67,5
+格鲁吉亚,Georgia,259,336,74,3
+巴勒斯坦,occupied Palestinian territory,244,308,62,2
+斯里兰卡,Sri Lanka,168,238,63,7
+约旦,Jordan,136,402,259,7
+越南,Vietnam,98,267,169,0
+缅甸,Myanmar,79,85,2,4
+柬埔寨,Cambodia,72,122,50,0
+文莱,Brunei Darussalam,36,136,99,1
+叙利亚,Syrian ArabRepublic,26,33,5,2
+蒙古,Mongolia,25,30,5,0
+老挝,Laos,19,19,0,0
+尼泊尔,Nepal,15,16,1,0
+马尔代夫,Maldives,7,23,16,0
+东帝汶,Tinor-Leste,6,6,0,0
+不丹,Bhutan,5,5,0,0
+也门共和国,The Republic of Yemen,1,1,0,0

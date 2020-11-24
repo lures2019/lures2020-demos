@@ -1,7 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afdcd0df-0300-4768-a9e3-ab2a45bd9631" name="默认更改列表" comment="" />
+    <list default="true" id="afdcd0df-0300-4768-a9e3-ab2a45bd9631" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/2020_4_17Python自制美颜软件.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/photos_after_beauty/qingchundou.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/photos_after_beauty/queban.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/qingchundou.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/queban.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_17python实现文字转语音小工具/.idea/2020_4_16python实现文字转语音小工具.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/国内今日数据/各省疫情分布图分布图.html" beforeDir="false" afterPath="$PROJECT_DIR$/国内今日数据/各省疫情分布图分布图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/国内今日数据/国内各省市今日数据.csv" beforeDir="false" afterPath="$PROJECT_DIR$/国内今日数据/国内各省市今日数据.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/国内各省市疫情动态实时爬取.py" beforeDir="false" afterPath="$PROJECT_DIR$/国内各省市疫情动态实时爬取.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/国外疫情数据/世界疫情重度国家分布图.html" beforeDir="false" afterPath="$PROJECT_DIR$/国外疫情数据/世界疫情重度国家分布图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/国外疫情数据/亚洲国家疫情数据.csv" beforeDir="false" afterPath="$PROJECT_DIR$/国外疫情数据/亚洲国家疫情数据.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/国外疫情数据/北美洲国家疫情数据.csv" beforeDir="false" afterPath="$PROJECT_DIR$/国外疫情数据/北美洲国家疫情数据.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/国外疫情数据/南美洲国家疫情数据.csv" beforeDir="false" afterPath="$PROJECT_DIR$/国外疫情数据/南美洲国家疫情数据.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/国外疫情数据/大洋洲国家疫情数据.csv" beforeDir="false" afterPath="$PROJECT_DIR$/国外疫情数据/大洋洲国家疫情数据.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/国外疫情数据/欧洲国家疫情数据.csv" beforeDir="false" afterPath="$PROJECT_DIR$/国外疫情数据/欧洲国家疫情数据.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/国外疫情数据/非洲国家疫情数据.csv" beforeDir="false" afterPath="$PROJECT_DIR$/国外疫情数据/非洲国家疫情数据.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/湖北今日数据/湖北各市疫情分布图.html" beforeDir="false" afterPath="$PROJECT_DIR$/湖北今日数据/湖北各市疫情分布图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/cloud.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/cloud.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/统计词.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/统计词.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/2020_4_17Python自制美颜软件.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/photos_after_beauty/qingchundou.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/photos_after_beauty/queban.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/qingchundou.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/queban.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/2020_4_17Python自制美颜软件.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/photos_after_beauty/qingchundou.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/photos_after_beauty/queban.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/qingchundou.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/queban.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +85,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1ZCmDSaXrJNtlEZV42n6DAfKCVl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -36,11 +97,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.新增需求">
+  <component name="RunManager" selected="Python.国内各省市疫情动态实时爬取">
     <configuration name="国内疫情" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="疫情数据分析" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -55,6 +117,204 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/国内疫情.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="国外疫情数据" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="疫情数据分析" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/国外疫情数据.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="国内各省市疫情动态实时爬取" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="疫情数据分析" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/国内各省市疫情动态实时爬取.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="新增需求" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="疫情数据分析" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/新增需求.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="新增需求" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="疫情数据分析" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/新增需求.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="国内各省市疫情动态实时爬取" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="疫情数据分析" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/国内各省市疫情动态实时爬取.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="病毒数据每日跟踪" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="疫情数据分析" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="D:/Cent Browser/新型冠状病毒每日数据跟踪" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:/Cent Browser/新型冠状病毒每日数据跟踪/病毒数据每日跟踪.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="国外疫情" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="疫情数据分析" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/国外疫情.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="国外疫情数据" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="疫情数据分析" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/国外疫情数据.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="国内各省市疫情动态实时爬取" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="疫情数据分析" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/国内各省市疫情动态实时爬取.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -239,142 +499,12 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="新增需求" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="疫情数据分析" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/新增需求.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="国内各省市疫情动态实时爬取" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="疫情数据分析" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/国内各省市疫情动态实时爬取.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="病毒数据每日跟踪" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="疫情数据分析" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/Cent Browser/新型冠状病毒每日数据跟踪" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:/Cent Browser/新型冠状病毒每日数据跟踪/病毒数据每日跟踪.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="国外疫情" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="疫情数据分析" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/国外疫情.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="国外疫情数据" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="疫情数据分析" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/国外疫情数据.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="国内各省市疫情动态实时爬取" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="疫情数据分析" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/国内各省市疫情动态实时爬取.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.国内各省市疫情动态实时爬取" />
         <item itemvalue="Python.新增需求" />
         <item itemvalue="Python.国内疫情" />
+        <item itemvalue="Python.国外疫情数据" />
       </list>
     </recent_temporary>
   </component>
@@ -396,6 +526,7 @@
       <workItem from="1585273098283" duration="111000" />
       <workItem from="1585277731873" duration="236000" />
       <workItem from="1585278901435" duration="693000" />
+      <workItem from="1587091118166" duration="1483000" />
     </task>
     <servers />
   </component>
@@ -411,22 +542,22 @@
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="450" y="127" key="FileChooserDialogImpl/0.0.1360.768@0.0.1360.768" timestamp="1584377312603" />
-    <state width="1205" height="169" key="GridCell.Tab.0.bottom" timestamp="1585279596482">
+    <state width="1317" height="113" key="GridCell.Tab.0.bottom" timestamp="1587092607061">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1205" height="169" key="GridCell.Tab.0.bottom/0.0.1360.768@0.0.1360.768" timestamp="1585279596482" />
-    <state width="1205" height="169" key="GridCell.Tab.0.center" timestamp="1585279596482">
+    <state width="1317" height="113" key="GridCell.Tab.0.bottom/0.0.1360.768@0.0.1360.768" timestamp="1587092607061" />
+    <state width="1317" height="113" key="GridCell.Tab.0.center" timestamp="1587092607061">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1205" height="169" key="GridCell.Tab.0.center/0.0.1360.768@0.0.1360.768" timestamp="1585279596482" />
-    <state width="1205" height="169" key="GridCell.Tab.0.left" timestamp="1585279596482">
+    <state width="1317" height="113" key="GridCell.Tab.0.center/0.0.1360.768@0.0.1360.768" timestamp="1587092607061" />
+    <state width="1317" height="113" key="GridCell.Tab.0.left" timestamp="1587092607061">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1205" height="169" key="GridCell.Tab.0.left/0.0.1360.768@0.0.1360.768" timestamp="1585279596482" />
-    <state width="1205" height="169" key="GridCell.Tab.0.right" timestamp="1585279596482">
+    <state width="1317" height="113" key="GridCell.Tab.0.left/0.0.1360.768@0.0.1360.768" timestamp="1587092607061" />
+    <state width="1317" height="113" key="GridCell.Tab.0.right" timestamp="1587092607061">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1205" height="169" key="GridCell.Tab.0.right/0.0.1360.768@0.0.1360.768" timestamp="1585279596482" />
+    <state width="1317" height="113" key="GridCell.Tab.0.right/0.0.1360.768@0.0.1360.768" timestamp="1587092607061" />
     <state width="1317" height="238" key="GridCell.Tab.1.bottom" timestamp="1584422631728">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
@@ -453,6 +584,7 @@
     <state x="347" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1360.768@0.0.1360.768" timestamp="1584412460254" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/2020_3_17$.coverage" NAME="国内各省市疫情动态实时爬取 Coverage Results" MODIFIED="1587092058568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$.coverage" NAME="新增需求 Coverage Results" MODIFIED="1585279030275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

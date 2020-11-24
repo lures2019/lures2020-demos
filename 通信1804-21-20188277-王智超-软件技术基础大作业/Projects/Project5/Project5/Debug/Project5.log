@@ -1,4 +1,2 @@
-﻿  main.cpp
-c:\users\hp\desktop\通信1804-21-20188277-王智超-软件技术基础大作业\projects\project5\project5\main.cpp(7): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
-  Project5.vcxproj -> C:\Users\HP\Desktop\通信1804-21-20188277-王智超-软件技术基础大作业\Projects\Project5\Debug\Project5.exe
-  Project5.vcxproj -> C:\Users\HP\Desktop\通信1804-21-20188277-王智超-软件技术基础大作业\Projects\Project5\Debug\Project5.pdb (Partial PDB)
+﻿  Project5.vcxproj -> D:\lures2020-demos\通信1804-21-20188277-王智超-软件技术基础大作业\Projects\Project5\Debug\Project5.exe
+  Project5.vcxproj -> D:\lures2020-demos\通信1804-21-20188277-王智超-软件技术基础大作业\Projects\Project5\Debug\Project5.pdb (Partial PDB)

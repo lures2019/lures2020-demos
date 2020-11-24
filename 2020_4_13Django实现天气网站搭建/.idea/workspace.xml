@@ -1,7 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d1d7afa-a11f-41b2-a792-053b058b97a1" name="默认更改列表" comment="" />
+    <list default="true" id="6d1d7afa-a11f-41b2-a792-053b058b97a1" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_18酷我音乐VIP/.idea/2020_4_18酷我音乐VIP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../微信读书笔记/2020_4_17OpenCV轻松入门：面向Python/笔记/第一章、OpenCV入门/代码/.idea/代码.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国内今日数据/各省疫情分布图分布图.html" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国内今日数据/各省疫情分布图分布图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国内今日数据/国内各省市今日数据.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国内今日数据/国内各省市今日数据.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国内各省市疫情动态实时爬取.py" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国内各省市疫情动态实时爬取.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国外疫情数据/世界疫情重度国家分布图.html" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国外疫情数据/世界疫情重度国家分布图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国外疫情数据/亚洲国家疫情数据.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国外疫情数据/亚洲国家疫情数据.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国外疫情数据/北美洲国家疫情数据.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国外疫情数据/北美洲国家疫情数据.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国外疫情数据/南美洲国家疫情数据.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国外疫情数据/南美洲国家疫情数据.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国外疫情数据/大洋洲国家疫情数据.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国外疫情数据/大洋洲国家疫情数据.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国外疫情数据/欧洲国家疫情数据.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国外疫情数据/欧洲国家疫情数据.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国外疫情数据/非洲国家疫情数据.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/国外疫情数据/非洲国家疫情数据.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/湖北今日数据/湖北各市疫情分布图.html" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_3_17疫情数据处理及可视化/湖北今日数据/湖北各市疫情分布图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/cloud.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/cloud.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/统计词.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_4_12新浪新闻+mongodb+tkinter+词云图/统计词.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/2020_4_17Python自制美颜软件.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/photos_after_beauty/qingchundou.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/photos_after_beauty/queban.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/qingchundou.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/queban.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/2020_4_17Python自制美颜软件.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/photos_after_beauty/qingchundou.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/photos_after_beauty/queban.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/qingchundou.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/queban.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制照片美颜/photos_after_beauty/queban.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_4_17Python自制照片美颜/photos_after_beauty/queban.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/2020_4_17Python自制美颜软件.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/photos_after_beauty/qingchundou.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/photos_after_beauty/queban.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/qingchundou.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/queban.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +73,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1aTXn1RkhwsCPUq41DppqvrvdC1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,6 +85,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -42,6 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1586760722171</updated>
       <workItem from="1586760731632" duration="5597000" />
+      <workItem from="1587692933540" duration="1370000" />
     </task>
     <servers />
   </component>

@@ -37,7 +37,7 @@ def main():
     titles = []  # 新闻标题
     urls = []  # 新闻链接
     # 连接MongoDB
-    client = pymongo.MongoClient(host='localhost', port=27017)
+    client = pymongo.MongoClient(host='localhost', port=27017,password='123456')
     # 指定数据库
     db = client.news
     collection = db.news_message
@@ -90,7 +90,7 @@ def main():
         # 词云形状
         mask=color_mask,
         # 允许最大词汇
-        max_words=2000,
+        max_words=500,
         # 最大号字体
         max_font_size=40
     )

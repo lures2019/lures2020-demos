@@ -19,7 +19,7 @@ def get_url(url):
                 os.mkdir(path)
         f = open(path + '/' + '国内各省市今日数据.csv', mode="w", newline="", encoding="utf-8-sig")
         csv_write = csv.writer(f)
-        csv_write.writerow(['省份名称', '省份简称或者是直辖市', '现存确诊', '累计确诊', '死亡', '治愈'])
+        csv_write.writerow(['省份名称', '省份简称或者是直辖市', '现存确诊', '累计确诊', '治愈', '死亡'])
 
         attrs = []  # 存储中国各省、自治区
         values = []  # 存储各省现存确诊数

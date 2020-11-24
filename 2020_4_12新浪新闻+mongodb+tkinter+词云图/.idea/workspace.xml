@@ -1,7 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76448d3d-f88f-4c78-9da7-e7250a5877ff" name="默认更改列表" comment="" />
+    <list default="true" id="76448d3d-f88f-4c78-9da7-e7250a5877ff" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/2020_4_17Python自制美颜软件.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/photos_after_beauty/qingchundou.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/photos_after_beauty/queban.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/qingchundou.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_16Python自制照片美颜/queban.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2020_4_17python实现文字转语音小工具/.idea/2020_4_16python实现文字转语音小工具.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/cloud.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/统计词.txt" beforeDir="false" afterPath="$PROJECT_DIR$/统计词.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/2020_4_17Python自制美颜软件.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/photos_after_beauty/qingchundou.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/photos_after_beauty/queban.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/qingchundou.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_16Python自制美颜软件/queban.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/2020_4_17Python自制美颜软件.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/photos_after_beauty/qingchundou.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/photos_after_beauty/queban.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/qingchundou.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/queban.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +61,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1aDX9YFAwVMPj7ChCiJ2Z7YXHsb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -25,6 +73,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -69,6 +118,8 @@
       <updated>1586270987463</updated>
       <workItem from="1586270991338" duration="562000" />
       <workItem from="1586684398034" duration="19747000" />
+      <workItem from="1587089994865" duration="354000" />
+      <workItem from="1587090521840" duration="569000" />
     </task>
     <servers />
   </component>
@@ -76,22 +127,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1300" height="282" key="GridCell.Tab.0.bottom" timestamp="1586706771066">
+    <state width="1317" height="312" key="GridCell.Tab.0.bottom" timestamp="1587091091419">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1300" height="282" key="GridCell.Tab.0.bottom/0.0.1360.768@0.0.1360.768" timestamp="1586706771066" />
-    <state width="1300" height="282" key="GridCell.Tab.0.center" timestamp="1586706771066">
+    <state width="1317" height="312" key="GridCell.Tab.0.bottom/0.0.1360.768@0.0.1360.768" timestamp="1587091091419" />
+    <state width="1317" height="312" key="GridCell.Tab.0.center" timestamp="1587091091419">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1300" height="282" key="GridCell.Tab.0.center/0.0.1360.768@0.0.1360.768" timestamp="1586706771066" />
-    <state width="1300" height="282" key="GridCell.Tab.0.left" timestamp="1586706771066">
+    <state width="1317" height="312" key="GridCell.Tab.0.center/0.0.1360.768@0.0.1360.768" timestamp="1587091091419" />
+    <state width="1317" height="312" key="GridCell.Tab.0.left" timestamp="1587091091419">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1300" height="282" key="GridCell.Tab.0.left/0.0.1360.768@0.0.1360.768" timestamp="1586706771066" />
-    <state width="1300" height="282" key="GridCell.Tab.0.right" timestamp="1586706771066">
+    <state width="1317" height="312" key="GridCell.Tab.0.left/0.0.1360.768@0.0.1360.768" timestamp="1587091091419" />
+    <state width="1317" height="312" key="GridCell.Tab.0.right" timestamp="1587091091419">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1300" height="282" key="GridCell.Tab.0.right/0.0.1360.768@0.0.1360.768" timestamp="1586706771066" />
+    <state width="1317" height="312" key="GridCell.Tab.0.right/0.0.1360.768@0.0.1360.768" timestamp="1587091091419" />
     <state x="181" y="26" key="SettingsEditor" timestamp="1586684602666">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
@@ -99,5 +150,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/$demo.coverage" NAME="demo Coverage Results" MODIFIED="1586705539449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/2020_4_12_mongodb_tkinter_$demo.coverage" NAME="demo Coverage Results" MODIFIED="1587090662992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

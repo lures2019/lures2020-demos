@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="m1" uuid="ccad3dbe-de5c-4e18-8e4c-3aeb69f55307">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:D:\lures2020-demos\2020_10_31_SQL处理\stubfor_m1\stubfor_m1\m1.db</jdbc-url>
+    </data-source>
+  </component>
+</project>

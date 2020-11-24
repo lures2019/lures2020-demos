@@ -57,6 +57,7 @@
       <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/photos_after_beauty/queban.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/qingchundou.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../2020_4_17Python自制美颜软件/queban.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +98,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../2020_6_11Python实现简易浏览器" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.调用自定义函数">
@@ -208,7 +209,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591746714084</updated>
-      <workItem from="1591746719590" duration="6087000" />
+      <workItem from="1591746719590" duration="6698000" />
     </task>
     <servers />
   </component>
@@ -216,26 +217,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="228" key="GridCell.Tab.0.bottom" timestamp="1591753248813">
+    <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1591765051596">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="228" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1591753248813" />
-    <state width="1323" height="228" key="GridCell.Tab.0.center" timestamp="1591753248812">
+    <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1591765051596" />
+    <state width="1323" height="228" key="GridCell.Tab.0.bottom" timestamp="1591765052703">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="228" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1591753248812" />
-    <state width="1323" height="228" key="GridCell.Tab.0.left" timestamp="1591753248812">
+    <state width="1323" height="228" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1591765052703" />
+    <state width="1323" height="228" key="GridCell.Tab.0.center" timestamp="1591765052703">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="228" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1591753248812" />
-    <state width="1323" height="228" key="GridCell.Tab.0.right" timestamp="1591753248813">
+    <state width="1323" height="228" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1591765052703" />
+    <state width="1323" height="228" key="GridCell.Tab.0.left" timestamp="1591765052702">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="228" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1591753248813" />
-    <state x="184" y="26" key="SettingsEditor" timestamp="1591746736694">
+    <state width="1323" height="228" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1591765052702" />
+    <state width="1323" height="228" key="GridCell.Tab.0.right" timestamp="1591765052703">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="184" y="26" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1591746736694" />
+    <state width="1323" height="228" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1591765052703" />
+    <state x="184" y="26" key="SettingsEditor" timestamp="1591765047412">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="184" y="26" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1591765047412" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1591752941103">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
