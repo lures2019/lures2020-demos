@@ -1,0 +1,396 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+
+        <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+        <link rel="stylesheet" href="https://cache.amap.com/lbs/static/jquery.range.css"/>
+        <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+
+        <title>高德地图+58租房</title>
+
+        <script src="https://cache.amap.com/lbs/static/jquery-1.9.1.js"></script>
+        <script src="https://cache.amap.com/lbs/static/jquery.range.js"></script>
+        <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+        <!-- 加载地图JSAPI脚本 -->
+        <script src="https://webapi.amap.com/maps?v=1.4.15&key=5db587a0ac2e4a0f218177bc61f5ca26&plugin=AMap.ArrivalRange,AMap.Scale,AMap.Geocoder,AMap.Transfer,AMap.Driving,AMap.Walking,AMap.Riding,AMap.Autocomplete"></script>
+
+        <style>
+
+            /*面板控制样式*/
+            .control-panel{
+                position:absolute;
+                top: 30px;
+                right: 20px;
+            }
+
+            /*面板内容样式*/
+            .control-entry{
+                width: 300px;
+                background-color: rgba(119,136,153,0.8);
+                font-family: fantasy,sans-serif;
+                text-align: left;
+                color: white;
+                overflow: hidden;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            /*文字与右侧距离*/
+            .control-input{
+                margin-left: 100px;
+            }
+
+            /*输入框宽度*/
+            .control-input input[type="text"]{
+                width: 150px;
+            }
+
+            /*文字样式*/
+            .control-panel label{
+                float: left;
+                width: 100px;
+            }
+
+            /*路线规划信息窗体样式*/
+            #transfer-panel{
+                position: absolute;
+                background-color: white;
+                max-height: 80%;
+                overflow-y: auto;
+                top: 30px;
+                left: 20px;
+                width: 250px;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <div id="container"></div>
+
+        <div class="control-panel">
+            <!--显示输入地址面板-->
+            <div class="control-entry">
+                <label>输入工作地点：</label>
+                <div class="control-input">
+                    <input id="work-location" type="text">
+                </div>
+            </div>
+            <!--显示通勤方式面板-->
+            <div class="control-entry">
+                <label>选择通勤方式：</label>
+                <div class="control-input">
+                    <input type="radio" name="vehicle" value="SUBWAY,BUS" onclick="takeWay(this)" />公交
+                    <input type="radio" name="vehicle" value="CAR" onclick="takeWay(this)"/>驾车
+                    <input type="radio" name="vehicle" value="WALK" onclick="takeWay(this)"/>步行
+                    <input type="radio" name="vehicle" value="RIDE" onclick="takeWay(this)"/>骑行
+                </div>
+            </div>
+            <!--显示导入房源面板-->
+            <div class="control-entry">
+                <label>导入房源文件：</label>
+                <div class="control-input">
+                    <input type="file" name="file" onchange="importRentInfo(this)">
+                </div>
+            </div>
+        </div>
+        <div id="transfer-panel"></div>
+
+
+
+        <script>
+            //地图部分
+            var map = new AMap.Map('container', {
+                resizeEnable: true,               //是否监控地图容器尺寸变化，页面可调整大小
+                zoomEnable:true,                  // 可缩放
+                zoom:11,                          //初始化地图层级，缩放等级，数字越大离地球越近
+                center: [114.07, 22.62]    //初始化地图中心点，这里使用的是北京的经纬度
+            });
+            //添加标尺
+            var scale=new AMap.Scale();
+            map.addControl(scale);
+
+            //经度、纬度、时间、通勤方式（默认是地铁+公交）
+            var x,y,t,vehicle="SUBWAY,BUS";
+            //工作地点，工作标记
+            var workAddress,workMarker;
+            //房源标记数组
+            var rentMarkerArray=[];
+            //多边形数组，存储到达范围的计算结果
+            var polygonArray=[];
+            //路线规划
+            var amapTransfer;  //公交
+            var amapDriving;   //架车
+            var amapWalking;   //步行
+            var amapRiding;    //骑行
+
+            //到达范围对象
+            var arrivalRange= new AMap.ArrivalRange();
+            //信息窗体对象
+            var infoWindow=new AMap.InfoWindow({
+                offset: new AMap.Pixel(0,-30)
+            });
+            //地址自动补全对象
+            var auto=new AMap.Autocomplete({
+                //根据id指定输入内容
+                //上面input标签，id为work-location的文本框，也就是输入工作地点文本框
+                input:"work-location"
+            });
+
+
+            //1.添加事件监听，在选择完地址以后调用workLocationSelected方法
+            AMap.event.addListener(auto,"select",workLocationSelected);
+
+
+            //2.选择工作地点后触发的方法
+            function workLocationSelected(e) {
+                //更新工作地点
+                workAddress=e.poi.name;
+            }
+
+            //3.选择通勤方式
+            function takeWay(radio) {
+                vehicle=radio.value;
+                if (amapDriving)
+                    amapDriving.clear();  //清空驾车路线规划
+                if (amapTransfer)
+                    amapTransfer.clear();  //清空公交路线规划
+                if (amapWalking)
+                    amapWalking.clear();   //清空步行路线规划
+                if (amapRiding)
+                    amapRiding.clear();    //清空骑行路线规划
+                //调用加载1小时到达区域的方法
+                loadWorkLocation();
+            }
+
+            //5.清除已有的到达区域
+            function delWorkLocation() {
+                if (polygonArray)
+                    map.remove(polygonArray);   //清空存储到达范围的计算结果
+                if (workMarker)
+                    map.remove(workMarker);    //清空工作标记
+                polygonArray=[];
+            }
+
+            //6.加载工作地点标记
+            function loadWorkMarker(x,y,locationName) {
+                workMarker = new AMap.Marker({
+                    map:map,
+                    title:locationName,
+                    icon:'http://webapi.amap.com/theme/v1.3/markers/n/mark_r.png',
+                    position:[x,y]
+                });
+            }
+
+            //7.加载到达范围
+            function loadWorkRange(x,y,t,color,v) {
+                arrivalRange.search([x,y],t,function (status,result) {
+                    if(result.bounds){
+                        for (var i=0;i< result.bounds.length;i++){
+                            //多边形对象
+                            var polygon=new AMap.Polygon({
+                                map:map,
+                                fillColor:color,    //填充色
+                                fillOpacity:"0.4",  //透明度
+                                strokeWeight:1      //线宽
+                            });
+                            //到达范围的多边形路径
+                            polygon.setPath(result.bounds[i]);
+                            //增加多边形
+                            polygonArray.push(polygon);
+                        }
+                    }
+
+                },{
+                    policy:v
+                });
+            }
+
+            //4.加载到达范围
+            function loadWorkLocation() {
+                //清除已有的到达区域
+                delWorkLocation();
+                //创建地址坐标对象
+                var geocoder=new AMap.Geocoder({
+                    city:"深圳",
+                    radius:1000
+                });
+                //获取位置
+                geocoder.getLocation(workAddress,function (status,result) {
+                    if (status==="complete" && result.info==='OK'){
+                        var geocode=result.geocodes[0];   // 获取地址编码
+                        x=geocode.location.getLng();      //经度
+                        y=geocode.location.getLat();      //纬度
+                        //加载工作地点标记
+                        loadWorkMarker(x,y);
+                        //如果是公交，才加载工作地点1小时内到达的范围
+                        if(vehicle==="SUBWAY,BUS")
+                            loadWorkRange(x,y,60,'#3f67a5',vehicle);
+                        //地图移动到工作地点的位置
+                        map.setZoomAndCenter(12,[x,y]);
+                    }
+                });
+            }
+
+            //8.导入房源信息触发的方法
+            function importRentInfo(fileInfo) {
+                //获取房源文件名称
+                var file=fileInfo.files[0].name;
+                //加载房源位置
+                loadRentLocationByFile(file);
+            }
+
+            //10.清除现有房源标记
+            function delRentLocation() {
+                if (rentMarkerArray)
+                    map.remove(rentMarkerArray);
+                rentMarkerArray=[];
+            }
+
+            //9.加载房源位置
+            function loadRentLocationByFile(fileName){
+                //清除现有房源标记
+                delRentLocation()
+                //所有的地点都记录在集合中
+                var rent_locations=new Set();
+                //获取文件中的房源信息
+                $.get(fileName,function (data) {
+                    //分割信息
+                    data=data.split("\n");
+                    //遍历房源位置
+                    data.forEach(function (item,index) {
+                        rent_locations.add(item.split(",")[1]);
+                    });
+                    rent_locations.forEach(function (element,index) {
+                        //加上房源标记
+                        addMarkerByAddress(element);
+                    });
+                });
+            }
+
+            //11.添加房源位置标记
+            function addMarkerByAddress(address) {
+                //地理编码对象
+                var geocoder=new AMap.Geocoder({
+                    city:"深圳",
+                    radius:1000
+                });
+                //获取位置
+                geocoder.getLocation(address,function (status,result) {
+                    if (status==="complete" && result.info==='OK'){
+                        var geocode=result.geocodes[0];   // 获取地址编码
+
+                        //标记对象
+                        rentMarker=new AMap.Marker({
+                            map:map,                       //显示标记的地图
+                            title:address,                 //鼠标移动至标记时所显示的文字
+                            //标记图标地址
+                            icon:'http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png',
+                            //位置
+                            position:[geocode.location.getLng(),geocode.location.getLat()]
+                        });
+
+                        rentMarkerArray.push(rentMarker);
+
+                        //相关房源网络地址
+                        rentMarker.content="<div>房源：<a target='_blank' href='http://sz.58.com/pinpaigongyu/?key=" + address + "' >" + address + "</a><div>"
+
+                        //标记事件处理
+                        rentMarker.on('click',function (e){
+                            //设置信息窗体显示的内容
+                            infoWindow.setContent(e.target.content);
+                            infoWindow.open(map,e.target.getPosition());
+
+                            //公交路线规划
+                            if(vehicle==="SUBWAY,BUS"){
+                                //路线规划是否清除
+                                if (amapTransfer)
+                                    amapTransfer.clear();
+                                //换乘对象
+                                amapTransfer=new AMap.Transfer({
+                                    map:map,
+                                    policy:AMap.TransferPolicy.LEAST_TIME,
+                                    city:"深圳市",
+                                    panel:'transfer-panel'
+                                });
+                                //根据起点、终点坐标查询换乘路线
+                                amapTransfer.search(
+                                    [
+                                        {keyword:workAddress},
+                                        {keyword:address}
+                                    ],
+                                    function (status,result) {}
+                                )
+                            }
+                            //驾车路线规划
+                            else if(vehicle==="CAR"){
+                                //路线规划是否清除
+                                if (amapDriving)
+                                    amapDriving.clear();
+                                //换乘对象
+                                amapDriving=new AMap.Driving({
+                                    map:map,
+                                    panel:'transfer-panel'
+                                });
+                                //根据起点、终点坐标查询换乘路线
+                                amapDriving.search(
+                                    [
+                                        {keyword:workAddress},
+                                        {keyword:address}
+                                    ],
+                                    function (status,result) {}
+                                )
+                            }
+                            //步行路线规划
+                            else if(vehicle==="WALK"){
+                                //路线规划是否清除
+                                if (amapWalking)
+                                    amapWalking.clear();
+                                //换乘对象
+                                amapWalking=new AMap.Walking({
+                                    map:map,
+                                    panel:'transfer-panel'
+                                });
+                                //根据起点、终点坐标查询换乘路线
+                                amapWalking.search(
+                                    [
+                                        {keyword:workAddress},
+                                        {keyword:address}
+                                    ],
+                                    function (status,result) {}
+                                )
+                            }
+                            //骑行路线规划
+                            else if(vehicle==="RIDE"){
+                                //路线规划是否清除
+                                if (amapRiding)
+                                    amapRiding.clear();
+                                //换乘对象
+                                amapRiding=new AMap.Riding({
+                                    map:map,
+                                    panel:'transfer-panel'
+                                });
+                                //根据起点、终点坐标查询换乘路线
+                                amapRiding.search(
+                                    [
+                                        {keyword:workAddress},
+                                        {keyword:address}
+                                    ],
+                                    function (status,result) {}
+                                )
+                            }
+
+                        });
+                    }
+                });
+
+            }
+
+
+        </script>
+    </body>
+</html>

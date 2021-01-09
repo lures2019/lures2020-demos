@@ -1,0 +1,48 @@
+import turtle
+
+wn = turtle.Screen()
+turtle.fill()
+
+turtle.penup()
+turtle.goto(-50,50)
+turtle.pendown()
+
+#Draw the blue bit - can you add the rest of the comments below???
+turtle.color("blue")
+turtle.begin_fill()
+for count in range(2):
+  turtle.forward(50)
+  turtle.right(90)
+  turtle.forward(100)
+  turtle.right(90)
+turtle.end_fill()
+
+#...
+turtle.penup()
+turtle.forward(100)
+turtle.pendown()
+
+#...
+turtle.begin_fill()
+turtle.color("red")
+for count in range(2):
+  turtle.forward(50)
+  turtle.right(90)
+  turtle.forward(100)
+  turtle.right(90)
+turtle.end_fill()
+
+#...
+turtle.back(100)
+turtle.color("black")
+for i in range(2):
+  turtle.forward(150)
+  turtle.right(90)
+  turtle.forward(100)
+  turtle.right(90)
+
+#...
+turtle.penup()
+turtle.goto(25,70)
+turtle.write("Flag of France",align="center", font=("Arial", 15, "normal"))
+turtle.hideturtle()
