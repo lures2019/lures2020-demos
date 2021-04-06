@@ -50,7 +50,11 @@ def save_data_to_csv(url):
 
 # 4、开启多进程
 def main(url):
+<<<<<<< HEAD
+    f = open("深圳龙华房源信息.csv",mode='a+',encoding='utf-8-sig',newline="")
+=======
     f = open("上海嘉定房源信息.csv",mode='a+',encoding='utf-8-sig',newline="")
+>>>>>>> 286c01981047c181c0c2e16ef7c08630ff07151e
     csv_write = csv.writer(f)
     try:
         titles_now, communitys, prices_now, img_urls_now = save_data_to_csv(url)
@@ -67,12 +71,23 @@ if __name__ == '__main__':
     urls = []
     for j in range(1,71):
         if (j == 1):
+<<<<<<< HEAD
+            url = 'https://sz.58.com/szlhxq/chuzu/?minprice=2000_4000&sourcetype=5'
+            urls.append(url)
+        else:
+            url = 'https://sz.58.com/szlhxq/chuzu/pn{}/?minprice=2000_4000&sourcetype=5'.format(j)
+=======
             url = 'https://sh.58.com/jiading/chuzu/'
             urls.append(url)
         else:
             url = 'https://sh.58.com/jiading/chuzu/pn{}/'.format(j)
+>>>>>>> 286c01981047c181c0c2e16ef7c08630ff07151e
             urls.append(url)
     pool.map(main, urls)
     pool.close()
     pool.join()
+<<<<<<< HEAD
     print("爬取完毕！")
+=======
+    print("爬取完毕！")
+>>>>>>> 286c01981047c181c0c2e16ef7c08630ff07151e

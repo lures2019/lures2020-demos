@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="281e38a6-7ccd-40ad-963b-b45ad22133b7" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/../2021_1_2_上海嘉定/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2021_2_10_异步加载美少女图片/.idea/2021_2_10_异步爬取美少女图片.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2021_2_13_机器学习大作业/.idea/2021_2_13_机器学习大作业.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_12_01_基于python和高德地图租房系统的设计与实现/.idea/2020_12_01_基于python和高德地图租房系统的设计与实现.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_12_01_基于python和高德地图租房系统的设计与实现/.idea/2020_12_01_基于python和高德地图租房系统的设计与实现.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020_12_01_基于python和高德地图租房系统的设计与实现/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2020_12_01_基于python和高德地图租房系统的设计与实现/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2021_1_2_上海嘉定/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2021_1_2_上海嘉定/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2021_1_2_上海嘉定/Codes/task2_58同城房源信息爬取.py" beforeDir="false" afterPath="$PROJECT_DIR$/../2021_1_2_上海嘉定/Codes/task2_58同城房源信息爬取.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2021_1_2_上海嘉定/Codes/task3_将地名处理成经纬度.py" beforeDir="false" afterPath="$PROJECT_DIR$/../2021_1_2_上海嘉定/Codes/task3_将地名处理成经纬度.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2021_1_2_上海嘉定/Codes/上海嘉定房源信息.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../2021_1_2_上海嘉定/Codes/上海嘉定房源信息.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2021_1_2_上海嘉定/Codes/添加经纬度后csv文件.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../2021_1_2_上海嘉定/Codes/添加经纬度后csv文件.csv" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1pvPL71WX2EvaIsQgaftP1GNRAD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../2021_1_2_上海嘉定/Codes" />
+  </component>
+  <component name="RunManager">
+    <configuration name="demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="2021_03_18_小试牛刀" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.demo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="281e38a6-7ccd-40ad-963b-b45ad22133b7" name="默认更改列表" comment="" />
+      <created>1616060531259</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616060531259</updated>
+      <workItem from="1616060537444" duration="5589000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1616066907140">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1616066907140" />
+    <state width="1323" height="95" key="GridCell.Tab.0.bottom" timestamp="1616066908278">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="95" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1616066908278" />
+    <state width="1323" height="95" key="GridCell.Tab.0.center" timestamp="1616066908278">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="95" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1616066908278" />
+    <state width="1323" height="95" key="GridCell.Tab.0.left" timestamp="1616066908278">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="95" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1616066908278" />
+    <state width="1323" height="95" key="GridCell.Tab.0.right" timestamp="1616066908278">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="95" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1616066908278" />
+    <state x="475" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1616062216844">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="475" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1616062216844" />
+    <state x="346" y="89" key="search.everywhere.popup" timestamp="1616061340191">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1616061340191" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/2021_03_18_$demo.coverage" NAME="demo Coverage Results" MODIFIED="1616065753170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="b6a5935d-1397-4818-9421-ec45172a34c8" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2021_2_10_异步加载美少女图片/.idea/2021_2_10_异步爬取美少女图片.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2021_2_13_机器学习大作业/.idea/2021_2_13_机器学习大作业.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Codes/task2_58同城房源信息爬取.py" beforeDir="false" afterPath="$PROJECT_DIR$/Codes/task2_58同城房源信息爬取.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Codes/task3_将地名处理成经纬度.py" beforeDir="false" afterPath="$PROJECT_DIR$/Codes/task3_将地名处理成经纬度.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Codes/上海嘉定房源信息.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Codes/上海嘉定房源信息.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Codes/添加经纬度后csv文件.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Codes/添加经纬度后csv文件.csv" afterDir="false" />
+    </list>
+=======
     <list default="true" id="b6a5935d-1397-4818-9421-ec45172a34c8" name="默认更改列表" comment="" />
+>>>>>>> 286c01981047c181c0c2e16ef7c08630ff07151e
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1mVgrpkIA1VA5gkBiA0eu7BGi6O" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+  <component name="ProjectId" id="1mVgrpkIA1VA5gkBiA0eu7BGi6O" />
+>>>>>>> 286c01981047c181c0c2e16ef7c08630ff07151e
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,10 +36,21 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+<<<<<<< HEAD
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../2020_12_01_基于python和高德地图租房系统的设计与实现" />
+  </component>
+  <component name="RunManager" selected="Python.task3_将地名处理成经纬度">
+    <configuration name="task4_调用高德API.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/2021_1_2_上海嘉定/Codes/task4_调用高德API.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+=======
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Python.task2_58同城房源信息爬取">
+>>>>>>> 286c01981047c181c0c2e16ef7c08630ff07151e
     <configuration name="task1_抓取免费ip代理(抓取代理基本无用，无需执行)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="上海嘉定" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -87,8 +119,14 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
+        <item itemvalue="Python.task3_将地名处理成经纬度" />
+        <item itemvalue="Python.task2_58同城房源信息爬取" />
+        <item itemvalue="JavaScript Debug.task4_调用高德API.html" />
+=======
         <item itemvalue="Python.task2_58同城房源信息爬取" />
         <item itemvalue="Python.task3_将地名处理成经纬度" />
+>>>>>>> 286c01981047c181c0c2e16ef7c08630ff07151e
         <item itemvalue="Python.task1_抓取免费ip代理(抓取代理基本无用，无需执行)" />
       </list>
     </recent_temporary>
@@ -104,6 +142,10 @@
       <option name="presentableId" value="Default" />
       <updated>1609584373636</updated>
       <workItem from="1609584379436" duration="8187000" />
+<<<<<<< HEAD
+      <workItem from="1615784183013" duration="1233000" />
+=======
+>>>>>>> 286c01981047c181c0c2e16ef7c08630ff07151e
     </task>
     <servers />
   </component>
@@ -115,6 +157,28 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="413" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1609586085771" />
+<<<<<<< HEAD
+    <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1615785415647">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1615785415647" />
+    <state width="1323" height="325" key="GridCell.Tab.0.bottom" timestamp="1615785418569">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="325" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1615785418569" />
+    <state width="1323" height="325" key="GridCell.Tab.0.center" timestamp="1615785418569">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="325" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1615785418569" />
+    <state width="1323" height="325" key="GridCell.Tab.0.left" timestamp="1615785418569">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="325" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1615785418569" />
+    <state width="1323" height="325" key="GridCell.Tab.0.right" timestamp="1615785418569">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="325" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1615785418569" />
+=======
     <state width="1323" height="466" key="GridCell.Tab.0.bottom" timestamp="1609596875311">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -131,6 +195,7 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1323" height="466" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1609596875311" />
+>>>>>>> 286c01981047c181c0c2e16ef7c08630ff07151e
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1609588069605">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -140,5 +205,10 @@
     <SUITE FILE_PATH="coverage/$task3_.coverage" NAME="task3_将地名处理成经纬度 Coverage Results" MODIFIED="1609595141432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes" />
     <SUITE FILE_PATH="coverage/$task2_58.coverage" NAME="task2_58同城房源信息爬取 Coverage Results" MODIFIED="1609596875299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes" />
     <SUITE FILE_PATH="coverage/$task1_ip__.coverage" NAME="task1_抓取免费ip代理(抓取代理基本无用，无需执行) Coverage Results" MODIFIED="1609586624669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes" />
+<<<<<<< HEAD
+    <SUITE FILE_PATH="coverage/2021_1_2_$task2_58.coverage" NAME="task2_58同城房源信息爬取 Coverage Results" MODIFIED="1615785228105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes" />
+    <SUITE FILE_PATH="coverage/2021_1_2_$task3_.coverage" NAME="task3_将地名处理成经纬度 Coverage Results" MODIFIED="1615785299511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Codes" />
+=======
+>>>>>>> 286c01981047c181c0c2e16ef7c08630ff07151e
   </component>
 </project>
