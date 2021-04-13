@@ -14,7 +14,7 @@ def get_datas_from_json():
     # 获取评论信息列表
     comments_list = []
     for comment in comments:
-        comments_list.append(eval(comment))
+        comments_list.append(eval(comment if "null" else ""))
     # 获取rating列表
     ratings_list = []
     for rating in ratings:

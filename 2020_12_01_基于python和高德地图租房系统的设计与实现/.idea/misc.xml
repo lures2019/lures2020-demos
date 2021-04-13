@@ -4,7 +4,11 @@
     <option name="languageLevel" value="ES6" />
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7 (2020_6_14_Django制作个人博客)" project-jdk-type="Python SDK" />
+>>>>>>> 286c01981047c181c0c2e16ef7c08630ff07151e
 =======
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7 (2020_6_14_Django制作个人博客)" project-jdk-type="Python SDK" />
 >>>>>>> 286c01981047c181c0c2e16ef7c08630ff07151e
