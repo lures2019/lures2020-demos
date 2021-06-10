@@ -202,7 +202,8 @@ def information_integration():
 # function 1.4————Draw wordcloud picture and save information
 def draw_wordcloud():
     topics,names,topics_total = information_integration()
-    words = "".join(topics)
+    # 去除一些id
+    words = "".join(topics).replace("转载","").replace("完结","").replace("Re","").replace("已完本","").replace("暗夜将至","")
     cut_text = "".join(jieba.cut(words))
     color_mask = cv2.imread('mask.jpg')
     cloud = WordCloud(
@@ -336,6 +337,25 @@ def get_fujian_topics():
     plt.savefig("pictures/闽越畅怀·福建 热门话题柱状图.png")
     plt.show()
     print("❤❤❤❤❤❤❤❤❤❤闽越畅怀·福建 热门话题柱状图已绘制❤❤❤❤❤❤❤❤❤❤")
+    # 开始绘制词云图
+    words = "".join(topics).replace("转载", "").replace("完结", "").replace("Re", "").replace("已完本", "").replace("暗夜将至","")
+    cut_text = "".join(jieba.cut(words))
+    color_mask = cv2.imread('mask.jpg')
+    cloud = WordCloud(
+        # 设置字体，不指定就会出现乱码
+        font_path=" C:\\Windows\\Fonts\\STXINGKA.TTF",
+        # 设置背景色
+        background_color='white',
+        # 词云形状
+        mask=color_mask,
+        # 允许最大词汇
+        max_words=500,
+        # 最大号字体
+        max_font_size=40
+    )
+    wCloud = cloud.generate(cut_text)
+    wCloud.to_file('pictures/闽越畅怀·福建热门话题词云图.jpg')
+    print("❤❤❤❤❤❤❤❤❤❤闽越畅怀·福建 热门话题词云图已绘制❤❤❤❤❤❤❤❤❤❤")
 
 
 def get_beijing_topics():
@@ -381,6 +401,25 @@ def get_beijing_topics():
     plt.savefig("pictures/京华烟云 热门话题柱状图.png")
     plt.show()
     print("❤❤❤❤❤❤❤❤❤❤京华烟云 热门话题柱状图已绘制❤❤❤❤❤❤❤❤❤❤")
+    # 开始绘制词云图
+    words = "".join(topics).replace("转载", "").replace("完结", "").replace("Re", "").replace("已完本", "").replace("暗夜将至", "")
+    cut_text = "".join(jieba.cut(words))
+    color_mask = cv2.imread('mask.jpg')
+    cloud = WordCloud(
+        # 设置字体，不指定就会出现乱码
+        font_path=" C:\\Windows\\Fonts\\STXINGKA.TTF",
+        # 设置背景色
+        background_color='white',
+        # 词云形状
+        mask=color_mask,
+        # 允许最大词汇
+        max_words=500,
+        # 最大号字体
+        max_font_size=40
+    )
+    wCloud = cloud.generate(cut_text)
+    wCloud.to_file('pictures/京华烟云热门话题词云图.jpg')
+    print("❤❤❤❤❤❤❤❤❤❤京华烟云 热门话题词云图已绘制❤❤❤❤❤❤❤❤❤❤")
 
 
 def get_shanghai_topics():
@@ -426,6 +465,25 @@ def get_shanghai_topics():
     plt.savefig("pictures/上海滩 热门话题柱状图.png")
     plt.show()
     print("❤❤❤❤❤❤❤❤❤❤上海滩 热门话题柱状图已绘制❤❤❤❤❤❤❤❤❤❤")
+    # 开始绘制词云图
+    words = "".join(topics).replace("转载", "").replace("完结", "").replace("Re", "").replace("已完本", "").replace("暗夜将至", "")
+    cut_text = "".join(jieba.cut(words))
+    color_mask = cv2.imread('mask.jpg')
+    cloud = WordCloud(
+        # 设置字体，不指定就会出现乱码
+        font_path=" C:\\Windows\\Fonts\\STXINGKA.TTF",
+        # 设置背景色
+        background_color='white',
+        # 词云形状
+        mask=color_mask,
+        # 允许最大词汇
+        max_words=500,
+        # 最大号字体
+        max_font_size=40
+    )
+    wCloud = cloud.generate(cut_text)
+    wCloud.to_file('pictures/上海滩热门话题词云图.jpg')
+    print("❤❤❤❤❤❤❤❤❤❤上海滩 热门话题词云图已绘制❤❤❤❤❤❤❤❤❤❤")
 
 
 def get_guangzhou_topics():
@@ -471,6 +529,25 @@ def get_guangzhou_topics():
     plt.savefig("pictures/魅力羊城·广州 热门话题柱状图.png")
     plt.show()
     print("❤❤❤❤❤❤❤❤❤❤魅力羊城·广州 热门话题柱状图已绘制❤❤❤❤❤❤❤❤❤❤")
+    # 开始绘制词云图
+    words = "".join(topics).replace("转载", "").replace("完结", "").replace("Re", "").replace("已完本", "").replace("暗夜将至", "")
+    cut_text = "".join(jieba.cut(words))
+    color_mask = cv2.imread('mask.jpg')
+    cloud = WordCloud(
+        # 设置字体，不指定就会出现乱码
+        font_path=" C:\\Windows\\Fonts\\STXINGKA.TTF",
+        # 设置背景色
+        background_color='white',
+        # 词云形状
+        mask=color_mask,
+        # 允许最大词汇
+        max_words=500,
+        # 最大号字体
+        max_font_size=40
+    )
+    wCloud = cloud.generate(cut_text)
+    wCloud.to_file('pictures/魅力羊城·广州热门话题词云图.jpg')
+    print("❤❤❤❤❤❤❤❤❤❤魅力羊城·广州 热门话题词云图已绘制❤❤❤❤❤❤❤❤❤❤")
 
 
 def get_communication_topics():
@@ -516,6 +593,25 @@ def get_communication_topics():
     plt.savefig("pictures/通信技术 热门话题柱状图.png")
     plt.show()
     print("❤❤❤❤❤❤❤❤❤❤通信技术 热门话题柱状图已绘制❤❤❤❤❤❤❤❤❤❤")
+    # 开始绘制词云图
+    words = "".join(topics).replace("转载", "").replace("完结", "").replace("Re", "").replace("已完本", "").replace("暗夜将至", "")
+    cut_text = "".join(jieba.cut(words))
+    color_mask = cv2.imread('mask.jpg')
+    cloud = WordCloud(
+        # 设置字体，不指定就会出现乱码
+        font_path=" C:\\Windows\\Fonts\\STXINGKA.TTF",
+        # 设置背景色
+        background_color='white',
+        # 词云形状
+        mask=color_mask,
+        # 允许最大词汇
+        max_words=500,
+        # 最大号字体
+        max_font_size=40
+    )
+    wCloud = cloud.generate(cut_text)
+    wCloud.to_file('pictures/通信技术热门话题词云图.jpg')
+    print("❤❤❤❤❤❤❤❤❤❤通信技术 热门话题词云图已绘制❤❤❤❤❤❤❤❤❤❤")
 
 
 def get_python_free_sky_topics():
@@ -562,6 +658,25 @@ def get_python_free_sky_topics():
     plt.savefig("pictures/Python的自由空间 热门话题柱状图.png")
     plt.show()
     print("❤❤❤❤❤❤❤❤❤❤Python的自由空间 热门话题柱状图已绘制❤❤❤❤❤❤❤❤❤❤")
+    # 开始绘制词云图
+    words = "".join(topics).replace("转载", "").replace("完结", "").replace("Re", "").replace("已完本", "").replace("暗夜将至", "")
+    cut_text = "".join(jieba.cut(words))
+    color_mask = cv2.imread('mask.jpg')
+    cloud = WordCloud(
+        # 设置字体，不指定就会出现乱码
+        font_path=" C:\\Windows\\Fonts\\STXINGKA.TTF",
+        # 设置背景色
+        background_color='white',
+        # 词云形状
+        mask=color_mask,
+        # 允许最大词汇
+        max_words=500,
+        # 最大号字体
+        max_font_size=40
+    )
+    wCloud = cloud.generate(cut_text)
+    wCloud.to_file('pictures/Python的自由空间热门话题词云图.jpg')
+    print("❤❤❤❤❤❤❤❤❤❤Python的自由空间 热门话题词云图已绘制❤❤❤❤❤❤❤❤❤❤")
 
 
 def get_intelligence_topics():
@@ -607,7 +722,25 @@ def get_intelligence_topics():
     plt.savefig("pictures/掌上智能 热门话题柱状图.png")
     plt.show()
     print("❤❤❤❤❤❤❤❤❤❤掌上智能 热门话题柱状图已绘制❤❤❤❤❤❤❤❤❤❤")
-
+    # 开始绘制词云图
+    words = "".join(topics).replace("转载", "").replace("完结", "").replace("Re", "").replace("已完本", "").replace("暗夜将至", "")
+    cut_text = "".join(jieba.cut(words))
+    color_mask = cv2.imread('mask.jpg')
+    cloud = WordCloud(
+        # 设置字体，不指定就会出现乱码
+        font_path=" C:\\Windows\\Fonts\\STXINGKA.TTF",
+        # 设置背景色
+        background_color='white',
+        # 词云形状
+        mask=color_mask,
+        # 允许最大词汇
+        max_words=500,
+        # 最大号字体
+        max_font_size=40
+    )
+    wCloud = cloud.generate(cut_text)
+    wCloud.to_file('pictures/掌上智能热门话题词云图.jpg')
+    print("❤❤❤❤❤❤❤❤❤❤掌上智能 热门话题词云图已绘制❤❤❤❤❤❤❤❤❤❤")
 
 
 if __name__ == '__main__':
