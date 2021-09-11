@@ -20,6 +20,7 @@ from PIL import Image,ImageTk
 from tkinter import messagebox
 import threading
 
+
 # 1、开始分析排行版网页，提取出所有的视频链接
 def analyse_html(imock):
     url = 'https://www.bilibili.com/v/popular/rank/all?spm_id_from=333.851.b_7072696d61727950616765546162.3'
@@ -137,8 +138,11 @@ def download_study_videos():
         response = requests.get(url=con)
         response.encoding = response.apparent_encoding
         select = parsel.Selector(response.text)
-        page = select.xpath('//div[@id="multi_page"]/div[@class="head-con"]/div[@class="range-box"]/span/text()').get()
-        pages = int(str(page).split('/')[-1])
+        # 如果网课系列下载失败，可能是类名等修改，去网页查看
+        page = select.xpath('//div[@id="multi_page"]/div[@class="head-con"]/div[@class="head-left"]/span/text()').get()
+        # 没bug则会输出显示
+        print(page)
+        pages = int(str(page).split('/')[-1].replace(")",""))
         for page in range(pages):
             con_now = con + "?p={}".format(page)
             download_videos(path + '/' + path_now, con_now)
